@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Lato;
+    color: #edf0f1;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0C0C0C;
+}
+
+li,
+a,
+h2 {
+    color: #edf0f1;
+    text-decoration: none;
+    font-weight: 100;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    width: 100%;
+    position: fixed;
+
+}
+
+.logo a {
+    cursor: pointer;
+    font-family: 'Allura', cursive;
+    font-size: 28px;
+
+}
+
+.nav_links {
+    list-style-type: none;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0 20px;
+    font-size: 12px;
+}
+
+.nav_links a {
+    padding-top: 30px;
+    cursor: pointer;
+    opacity: 0.75;
+}
+
+a:hover {
+    opacity: 1;
+}
+
+
+
+@media(max-width: 1200px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+    }
+
+    nav ul li a {
+        font-size: 12px;
+    }
+
+    header h2 {
+        margin-bottom: 30px;
+    }
+
+    header nav ul li {
+        margin: 0 7px;
+    }
+}
+
+/*banner area*/
+
+.banner-area {
+    width: 100%;
+    height: 100vh;
+    background: url("images/3k.jpg") center no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.banner-area h1 {
+    color: pink;
+    font-size: 50px;
+    animation: drop 1.5s ease;
+}
+
+.banner-area p {
+    text-indent: 50px;
+    text-align: center;
+    padding: 20px 250px;
+    font-size: 15px;
+
+}
+
+@keyframes drop {
+    0% {
+        opacity: 0;
+        transform: translateY(-160px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/*banner-area end*/
+
+/*about-us*/
+.about-image img {
+    padding: 50px;
+    margin: 40px;
+    max-width: 40vw;
+
+}
+
+.about-image {
+    display: flex;
+    justify-content: space-between;
+}
+
+.first-image p {
+    padding: 150px 150px 0 0;
+}
+
+.second-image p {
+    padding: 150px 0 0 150px;
+}
+
+.h1about {
+    padding-top: 80px;
+    text-align: center;
+    font-weight: 160;
+    font-family: 'Allura', cursive;
+    font-size: 80px;
+}
+
+@media (max-width: 1000px) {
+    .first-image {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .second-image {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+
+    }
+
+    .about-image img {
+        max-width: 62vh;
+        padding: 10px 80px;
+    }
+
+    .about-image p {
+        text-align: center;
+        padding: 10px 80px;
+        font-size: 12px;
+    }
+}
+
+/* conception start*/
+
+.conception {
+    display: flex;
+    background-color: #edf0f1;
+    text-align: center;
+    flex-direction: column;
+}
+
+.conception p {
+    color: black;
+    padding: 100px;
+}
+
+.conception-images {
+    display: flex;
+    justify-content: space-around;
+}
+
+.conception-images img {
+
+    max-width: 70vh;
+    padding-bottom: 60px;
+}
+
+@media (max-width: 1000px) {
+    .conception-images {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* conception end*/
+
+/* bigImage start */
+
+.bigImage {
+    width: 100%;
+    height: 100vh;
+    background: url("imgCon/3.jpg") center no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+
+}
+
+.bigImage h1 {
+    color: #FF99CC;
+    font-size: 70px;
+    margin: auto;
+}
+
+/* bigImage end*/
+
+/*MyDesign start*/
+
+.myDesign {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.myDesign-paragraph {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 25%;
+}
+
+.myDesign-paragraph h1 {
+    margin-bottom: 40px;
+}
+
+.myDesign-paragraph p {
+    max-width: 40%;
+}
+
+
+.myDesign img {
+    max-width: 50vh;
+    margin: 100px;
+}
+
+.btn-myDesign {
+
+    color: #edf0f1;
+    border: 1px solid #edf0f1;
+    background: transparent;
+    padding: 10px;
+    margin-top: 20px;
+    width: 10vh;
+    text-align: center;
+    font-size: 16px;
+}
+
+@media (max-width: 1024px) {
+    .myDesign {
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-top: 100px;
+    }
+
+    .btn-myDesign {
+        margin-bottom: 100px;
+    }
+
+}
