@@ -19,17 +19,17 @@
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:origin/MVC" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:Database" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c59d1874-3b12-4dc4-8617-137c499bc9e0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/app.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/app.js" beforeDir="false" />
+    <list default="true" id="c59d1874-3b12-4dc4-8617-137c499bc9e0" name="Default Changelist" comment="Dodana klasa FakturySprzedazy">
+      <change afterPath="$PROJECT_DIR$/database/FakturySprzedazy.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/M&amp;M.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_19_12_2020_18_46__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_19_12_2020_18_46__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,12 +42,13 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="layout" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.4" />
   <component name="ProjectId" id="1lsxo65SPUoW0ftfMsm8sPqv6KO" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -68,6 +69,7 @@
       <option name="presentableId" value="Default" />
       <updated>1608399771852</updated>
       <workItem from="1608399773137" duration="1333000" />
+      <workItem from="1608481125457" duration="1996000" />
     </task>
     <servers />
   </component>
@@ -85,7 +87,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/MVC" />
+                        <option value="Database" />
                       </list>
                     </value>
                   </entry>
@@ -96,12 +98,25 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Dodana klasa FakturySprzedazy" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dodana klasa FakturySprzedazy" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="667" y="163" key="#PHP" timestamp="1608482372086">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="667" y="163" key="#PHP/0.0.1920.1040@0.0.1920.1040" timestamp="1608482372086" />
     <state x="-1736" y="87" key="MergeDialog" timestamp="1608400018868">
       <screen x="-1920" y="1" width="1920" height="1040" />
     </state>
     <state x="-1736" y="87" key="MergeDialog/-1920.1.1920.1040/0.0.1920.1040@-1920.1.1920.1040" timestamp="1608400018868" />
+    <state x="706" y="243" key="NewPhpClassDialog" timestamp="1608482480947">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="706" y="243" key="NewPhpClassDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1608482480947" />
     <state x="-1828" y="93" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1608400125419">
       <screen x="-1920" y="1" width="1920" height="1040" />
     </state>
