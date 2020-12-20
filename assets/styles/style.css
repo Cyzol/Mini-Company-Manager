@@ -93,4 +93,168 @@ label{
 
 /*NAVBAR*/
 
+header {
+    display: flex;
+    align-items: center;
+    padding: 20px 10%;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    position: absolute;
+}
 
+
+nav ul li {
+    margin: 10px;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.85;
+    color: var(--main-font-color);
+    font-weight: 200;
+}
+
+a:hover {
+    opacity: 0.5;
+}
+
+@media(max-width: 800px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+    }
+
+    header a {
+        margin-bottom: 30px;
+    }
+
+    nav ul li a {
+        font-size: 1.6rem;
+
+    }
+}
+
+@media(max-width: 800px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+    }
+
+    header a {
+        margin-bottom: 30px;
+    }
+
+    nav ul li a {
+        font-size: 1.6rem;
+
+    }
+}
+
+@media(max-width: 360px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        min-width: 350px;
+    }
+
+    header a {
+        margin-bottom: 30px;
+    }
+
+    nav ul li a {
+        font-size: 1.2rem;
+
+    }
+}
+
+@keyframes drop {
+    0% {
+        opacity: 0;
+        transform: translateY(-160px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* bannerArea */
+
+.bannerArea {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background: url("/assets/images/b1.jpg") center no-repeat;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.bannerArea h1 {
+    font-size: 8rem;
+    color: var(--main-font-color);
+    animation: drop 1.5s ease;
+}
+
+.bannerArea p {
+    font-size: 1.6rem;
+    animation: leftside 1.5s ease;
+    color: white;
+}
+
+.arrow {
+    display: flex;
+    justify-content: center;
+    font-size: 4rem;
+    align-items: flex-end;
+    height: 20%;
+}
+
+.arrow a {
+    opacity: 0.1;
+}
+
+.arrow a:hover {
+    opacity: 1;
+    transition: 0.6s ease-in;
+}
+
+@media(max-width: 800px) {
+
+    .bannerArea {
+        display: flex;
+        justify-content: center;
+    }
+
+    .bannerArea h1 {
+        font-size: 4.5rem;
+
+    }
+
+}
+
+@media(max-width: 390px) {
+
+    .bannerArea {
+        display: flex;
+        justify-content: center;
+        min-width: 350px;
+    }
+
+    .bannerArea h1 {
+        font-size: 3.5rem;
+    }
+
+}

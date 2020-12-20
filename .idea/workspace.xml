@@ -19,27 +19,15 @@
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-<<<<<<< HEAD
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="BRANCH:Layout" type="e8cecc67:BranchNodeDescriptor" />
-=======
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:origin/MVC" type="e8cecc67:BranchNodeDescriptor" />
->>>>>>> main
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="a62e36cf-e788-4283-b45f-c4b90dd1eae0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-=======
-    <list default="true" id="c59d1874-3b12-4dc4-8617-137c499bc9e0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/app.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/app.js" beforeDir="false" />
->>>>>>> main
+    <list default="true" id="7bf1df46-6a92-4ff7-808f-dac7276616fc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,23 +37,22 @@
   <component name="ComposerSettings">
     <execution />
   </component>
-<<<<<<< HEAD
-  <component name="TaskManager">
-    <servers />
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="main" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="oldMeFiltersMigrated" value="true" />
-=======
+  <component name="Git.Pull.Settings">
+    <option name="BRANCH" value="main" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="layout" />
+        <entry key="$PROJECT_DIR$" value="MVC" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
-  <component name="ProjectId" id="1lsxo65SPUoW0ftfMsm8sPqv6KO" />
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.4" />
+  <component name="ProjectId" id="1lvAOhqDg1VQseejycpT1htHohX" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -73,19 +60,52 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Semestr 5\Aplikacje1\Mini-Company-Manager\assets" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c59d1874-3b12-4dc4-8617-137c499bc9e0" name="Default Changelist" comment="" />
-      <created>1608399771852</created>
+      <changelist id="7bf1df46-6a92-4ff7-808f-dac7276616fc" name="Default Changelist" comment="" />
+      <created>1608467162050</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1608399771852</updated>
-      <workItem from="1608399773137" duration="1333000" />
+      <updated>1608467162050</updated>
+      <workItem from="1608467163060" duration="12523000" />
     </task>
+    <task id="LOCAL-00001" summary="Add Login layout to the home page">
+      <created>1608474173768</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1608474173768</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add Homepage Controller and Home page View">
+      <created>1608481392747</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1608481392747</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Update gitignore">
+      <created>1608482056766</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1608482056766</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Update gitignore">
+      <created>1608482620199</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1608482620199</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,7 +122,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/MVC" />
+                        <option value="Layout" />
                       </list>
                     </value>
                   </entry>
@@ -113,24 +133,44 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="MVC" />
+    <MESSAGE value="Add Login layout to the home page" />
+    <MESSAGE value="Add Homepage Controller and Home page View" />
+    <MESSAGE value="Update gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update gitignore" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-1736" y="87" key="MergeDialog" timestamp="1608400018868">
+    <state x="-1253" y="164" key="#PHP" timestamp="1608402470621">
       <screen x="-1920" y="1" width="1920" height="1040" />
     </state>
-    <state x="-1736" y="87" key="MergeDialog/-1920.1.1920.1040/0.0.1920.1040@-1920.1.1920.1040" timestamp="1608400018868" />
-    <state x="-1828" y="93" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1608400125419">
+    <state x="-1253" y="164" key="#PHP/-1920.1.1920.1040/0.0.1920.1040@-1920.1.1920.1040" timestamp="1608402470621" />
+    <state x="733" y="232" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1608479768292">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="733" y="232" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/-1920.1.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1608479768292" />
+    <state x="92" y="92" width="1793" height="856" key="DiffContextDialog" timestamp="1608487422692">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1793" height="856" key="DiffContextDialog/-1920.1.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1608487422692" />
+    <state x="709" y="243" key="NewPhpClassDialog" timestamp="1608478787726">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1211" y="244" key="NewPhpClassDialog/-1920.1.1920.1040/0.0.1920.1040@-1920.1.1920.1040" timestamp="1608401905698" />
+    <state x="709" y="243" key="NewPhpClassDialog/-1920.1.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1608478787726" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1608482661367">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.1.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1608482661367" />
+    <state x="-1143" y="435" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1608401352825">
       <screen x="-1920" y="1" width="1920" height="1040" />
     </state>
-    <state x="-1828" y="93" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/-1920.1.1920.1040/0.0.1920.1040@-1920.1.1920.1040" timestamp="1608400125419" />
-    <state x="-1069" y="414" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1608401060798">
-      <screen x="-1920" y="1" width="1920" height="1040" />
+    <state x="-1143" y="435" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.1.1920.1040/0.0.1920.1040@-1920.1.1920.1040" timestamp="1608401352825" />
+    <state x="181" y="211" width="1424" height="717" key="dock-window-1" timestamp="1608470673740">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1069" y="414" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.1.1920.1040/0.0.1920.1040@-1920.1.1920.1040" timestamp="1608401060798" />
-    <state x="-1180" y="234" key="git4idea.branch.GitSmartOperationDialog" timestamp="1608399986038">
-      <screen x="-1920" y="1" width="1920" height="1040" />
-    </state>
-    <state x="-1180" y="234" key="git4idea.branch.GitSmartOperationDialog/-1920.1.1920.1040/0.0.1920.1040@-1920.1.1920.1040" timestamp="1608399986038" />
->>>>>>> main
+    <state x="181" y="211" width="1424" height="717" key="dock-window-1/-1920.1.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1608470673740" />
   </component>
 </project>
