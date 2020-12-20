@@ -7,25 +7,37 @@ class Layout
         ?>
             <html>
             <head>
+                <meta charset="UTF-8">
+                <link rel="stylesheet" href="./assets/styles/style.css">
+                <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="styleheet">
+                <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
                 <title>M&M – Mini-Company Manager</title>
-                <link rel="stylesheet" href="./styles/style.css">
             </head>
             <body>
-            <?= self::navbar() ?>
+<!--            --><?//= self::navbar() ?>
             <?= isset($_SESSION['uid']) && $_SESSION['uid'] ? 'Zalogowany' : 'Wylogowany' ?>
         <?php
         $html = ob_get_clean();
         return $html;
     }
 
+    public static function bodyPage(){
+        ob_start();
+        ?>
+            <section class="banner-area" id="bannerArea">
+                <h1>collect all documents.</h1>
+            </section>
+        <?php
+    }
+
     public static function footer()
     {
         ob_start();
         ?>
-            <link>
+
             </body>
         <div class="footer">
-            <p>To jest footer</p>
+            <p>M&M – Mini-Company Manager</p>
         </div>
             </html>
         <?php
