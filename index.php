@@ -19,10 +19,13 @@ switch ($action) {
     case 'login':
         LoginController::index();
         break;
+    case 'home-page':
+        HomePageController::index();
+        break;
     case 'logout':
         LoginController::logout();
         break;
     default:
-        header('Location: index.php?action=login');
+        header('Location: index.php?action=home-page');
         break;
 }
