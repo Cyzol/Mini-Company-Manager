@@ -27,6 +27,7 @@ h2 {
     font-weight: 100;
 }
 
+/*HOME PAGE LOGIN*/
 .login-section{
     height: 90vh;
     display: flex;
@@ -89,3 +90,7 @@ label{
 ::placeholder{
     font-size: 1.5rem;
 }
+
+/*NAVBAR*/
+
+

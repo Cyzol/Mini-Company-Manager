@@ -28,6 +28,8 @@ class Layout
                 <h1>collect all documents.</h1>
             </section>
         <?php
+        $html = ob_get_clean();
+        return $html;
     }
 
     public static function footer()
