@@ -25,11 +25,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c59d1874-3b12-4dc4-8617-137c499bc9e0" name="Default Changelist" comment="Dodana klasa FakturySprzedazy">
-      <change afterPath="$PROJECT_DIR$/database/FakturySprzedazy.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/M&amp;M.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_19_12_2020_18_46__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_19_12_2020_18_46__Default_Changelist_.xml" afterDir="false" />
+    <list default="true" id="c59d1874-3b12-4dc4-8617-137c499bc9e0" name="Default Changelist" comment="Dodana klasa FakturySprzedazy&#10;Dodana baza danych w formacie .sql">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/FakturySprzedazy.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/FakturySprzedazy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,8 +68,16 @@
       <option name="presentableId" value="Default" />
       <updated>1608399771852</updated>
       <workItem from="1608399773137" duration="1333000" />
-      <workItem from="1608481125457" duration="1996000" />
+      <workItem from="1608481125457" duration="4497000" />
     </task>
+    <task id="LOCAL-00001" summary="Dodana klasa FakturySprzedazy&#10;Dodana baza danych w formacie .sql">
+      <created>1608483348723</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1608483348723</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,7 +109,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Dodana klasa FakturySprzedazy" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dodana klasa FakturySprzedazy" />
+    <MESSAGE value="Dodana klasa FakturySprzedazy&#10;Dodana baza danych w formacie .sql" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dodana klasa FakturySprzedazy&#10;Dodana baza danych w formacie .sql" />
   </component>
   <component name="WindowStateProjectService">
     <state x="667" y="163" key="#PHP" timestamp="1608482372086">
@@ -117,6 +125,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="706" y="243" key="NewPhpClassDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1608482480947" />
+    <state x="645" y="255" key="Vcs.Push.Dialog.v2" timestamp="1608483644447">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="645" y="255" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1608483644447" />
     <state x="-1828" y="93" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1608400125419">
       <screen x="-1920" y="1" width="1920" height="1040" />
     </state>

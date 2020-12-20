@@ -15,18 +15,18 @@ class FakturySprzedazy
             throw new Exception($e->getMessage());
         }
     }
-    public function Select($statement="",$parameters=[]){
+    public function Select($statement="SELECT * FROM fakturysprzedazy"){
         try{
-            $stmt = $this->executeStatement( $statement , $parameters );
+            $stmt = $this->connection->query($statement);
             return $stmt->fetchAll();
         }catch(Exception $e){
             throw new Exception($e->getMessage());
         }
     }
-    public function Insert($statement="",$parameters=[]){
+    public function Insert($statement=""){
         try{
-            $this->executeStatement( $statement , $parameters );
-            return $this->connection->lastInsertId();
+            $this->connection->query($statement);
+            return 1;
         }catch(Exception $e){
             throw new Exception($e->getMessage());
         }
