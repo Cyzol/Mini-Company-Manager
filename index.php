@@ -7,6 +7,7 @@ session_start();
 
 $Faktura = new FakturySprzedazy();
 var_dump($Faktura->Select("SELECT * FROM fakturysprzedazy"));
+echo 'aaa';
 
 $action = isset($_GET['action']) ? $_GET['action'] : null;
 
