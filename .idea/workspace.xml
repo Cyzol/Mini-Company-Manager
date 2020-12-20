@@ -19,14 +19,27 @@
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+<<<<<<< HEAD
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="BRANCH:Layout" type="e8cecc67:BranchNodeDescriptor" />
+=======
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/MVC" type="e8cecc67:BranchNodeDescriptor" />
+>>>>>>> main
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="a62e36cf-e788-4283-b45f-c4b90dd1eae0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+=======
+    <list default="true" id="c59d1874-3b12-4dc4-8617-137c499bc9e0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/app.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/app.js" beforeDir="false" />
+>>>>>>> main
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,10 +49,88 @@
   <component name="ComposerSettings">
     <execution />
   </component>
+<<<<<<< HEAD
   <component name="TaskManager">
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="oldMeFiltersMigrated" value="true" />
+=======
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="layout" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="ProjectId" id="1lsxo65SPUoW0ftfMsm8sPqv6KO" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c59d1874-3b12-4dc4-8617-137c499bc9e0" name="Default Changelist" comment="" />
+      <created>1608399771852</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1608399771852</updated>
+      <workItem from="1608399773137" duration="1333000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/MVC" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1736" y="87" key="MergeDialog" timestamp="1608400018868">
+      <screen x="-1920" y="1" width="1920" height="1040" />
+    </state>
+    <state x="-1736" y="87" key="MergeDialog/-1920.1.1920.1040/0.0.1920.1040@-1920.1.1920.1040" timestamp="1608400018868" />
+    <state x="-1828" y="93" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1608400125419">
+      <screen x="-1920" y="1" width="1920" height="1040" />
+    </state>
+    <state x="-1828" y="93" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/-1920.1.1920.1040/0.0.1920.1040@-1920.1.1920.1040" timestamp="1608400125419" />
+    <state x="-1069" y="414" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1608401060798">
+      <screen x="-1920" y="1" width="1920" height="1040" />
+    </state>
+    <state x="-1069" y="414" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.1.1920.1040/0.0.1920.1040@-1920.1.1920.1040" timestamp="1608401060798" />
+    <state x="-1180" y="234" key="git4idea.branch.GitSmartOperationDialog" timestamp="1608399986038">
+      <screen x="-1920" y="1" width="1920" height="1040" />
+    </state>
+    <state x="-1180" y="234" key="git4idea.branch.GitSmartOperationDialog/-1920.1.1920.1040/0.0.1920.1040@-1920.1.1920.1040" timestamp="1608399986038" />
+>>>>>>> main
   </component>
 </project>
