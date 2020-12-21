@@ -1,31 +1,34 @@
 <?php
 
+require_once __DIR__ . './../database/config.php';
 
-class FakturySprzedazy
+class Invoice
 {
     private $connection = null;
 
-    public function __construct($dbhost ='localhost',$dbname ='bazadanych',$username='root',$password=''){
+    public function __construct(){
         try{
-            $this->connection = new PDO("mysql:host={$dbhost};dbname={$dbname};", $username, $password);
+            global $config;
+            $this->connection = new PDO($config['dsn'], $config['username'], $config['password']);
             $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $this->connection->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-
         }catch(Exception $e){
             throw new Exception($e->getMessage());
         }
     }
-    public function Select($statement="SELECT * FROM fakturysprzedazy"){
+    public function select($params){
         try{
-            $stmt = $this->connection->query($statement);
+            $stmt = $this->connection->prepare('SELECT * FROM fakturysprzedazy WHERE ID = :id');
+            $result = $stmt->execute($params);
             return $stmt->fetchAll();
         }catch(Exception $e){
             throw new Exception($e->getMessage());
         }
     }
-    public function Insert($statement=""){
+    public function insert($params){
         try{
-            $this->connection->query($statement);
+            $stmt = $this->connection->prepare('INSERT INTO `fakturysprzedazy` (`ID`, `NumerFaktury`, `DaneKontrahenta`, `KwotaNetto`, `KwotaPodatkuVAT`, `KwotaBrutto`, `KwotaNettoWWalucie`, `Waluta`, `URL`) VALUES (NULL, :invoicenumber, :contactordata, :netamount, :grossamount, :vattax, :amountincurrency, :currency, :url);');
+            $result = $stmt->execute($params);
             return 1;
         }catch(Exception $e){
             throw new Exception($e->getMessage());
