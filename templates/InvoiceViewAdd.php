@@ -11,7 +11,7 @@ class InvoiceViewAdd
         <section class ="box-section">
             <form class="box-form" method="post" action="upload.php" enctype="multipart/form-data">
                 <div class="title">
-                    <h1 class="title title-large">Invoice</h1>
+                    <h1 class="title title-large">Sales Invoice</h1>
                 </div>
                 <input id="id-invoice" type="text" name="idinvoice" placeholder="Invoice number">
                 <input id="contractor-data" type="text" name="contractordata" placeholder="Contractor data">
@@ -29,7 +29,7 @@ class InvoiceViewAdd
                  </div>
                 <input type="file" id="fileToUpload" name="fileToUpload" value="Add Invoice" accept="application/pdf">
                 <input type="submit" name="submit" value="Add invoice">
-                <a href="#">Powrót</a>
+                <a href="index.php?action=home-page">Back</a>
             </form>
         </section>
         <?php
