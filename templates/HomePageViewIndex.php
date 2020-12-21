@@ -8,7 +8,7 @@ class HomePageViewIndex
         ob_start();
         ?>
         <?= Layout::header() ?>
-<!--        --><?//= Layout::navbar() ?>
+        <?= Layout::navbar() ?>
         <?= Layout::bodyPage()?>
         <?= Layout::footer() ?>
         <?php

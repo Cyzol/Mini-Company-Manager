@@ -27,10 +27,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7bf1df46-6a92-4ff7-808f-dac7276616fc" name="Default Changelist" comment="Update css">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/autoload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/HomePageViewIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/HomePageViewIndex.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Layout.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Layout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/LoginViewIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/LoginViewIndex.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +84,7 @@
       <updated>1608467162050</updated>
       <workItem from="1608467163060" duration="12523000" />
       <workItem from="1608542075630" duration="30000" />
+      <workItem from="1608550395410" duration="5903000" />
     </task>
     <task id="LOCAL-00001" summary="Add Login layout to the home page">
       <created>1608474173768</created>
@@ -116,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608487492732</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Update css">
+      <created>1608550508215</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1608550508215</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,23 +171,23 @@
       <screen x="-1920" y="1" width="1920" height="1040" />
     </state>
     <state x="-1253" y="164" key="#PHP/-1920.1.1920.1040/0.0.1920.1040@-1920.1.1920.1040" timestamp="1608402470621" />
-    <state x="733" y="232" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1608479768292">
+    <state x="733" y="232" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1608552527173">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="733" y="232" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/-1920.1.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1608479768292" />
+    <state x="733" y="232" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/-1920.1.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1608552527173" />
     <state x="92" y="92" width="1793" height="856" key="DiffContextDialog" timestamp="1608487422692">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1793" height="856" key="DiffContextDialog/-1920.1.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1608487422692" />
-    <state x="709" y="243" key="NewPhpClassDialog" timestamp="1608478787726">
+    <state x="709" y="243" key="NewPhpClassDialog" timestamp="1608552328125">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1211" y="244" key="NewPhpClassDialog/-1920.1.1920.1040/0.0.1920.1040@-1920.1.1920.1040" timestamp="1608401905698" />
-    <state x="709" y="243" key="NewPhpClassDialog/-1920.1.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1608478787726" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1608487504901">
+    <state x="709" y="243" key="NewPhpClassDialog/-1920.1.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1608552328125" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1608550608560">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.1.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1608487504901" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.1.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1608550608560" />
     <state x="-1143" y="435" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1608401352825">
       <screen x="-1920" y="1" width="1920" height="1040" />
     </state>
@@ -184,9 +196,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="181" y="211" width="1424" height="717" key="dock-window-1/-1920.1.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1608470673740" />
-    <state x="740" y="233" key="git4idea.branch.GitSmartOperationDialog" timestamp="1608542102611">
+    <state x="740" y="233" key="git4idea.branch.GitSmartOperationDialog" timestamp="1608550494520">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="233" key="git4idea.branch.GitSmartOperationDialog/-1920.1.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1608542102611" />
+    <state x="740" y="233" key="git4idea.branch.GitSmartOperationDialog/-1920.1.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1608550494520" />
   </component>
 </project>

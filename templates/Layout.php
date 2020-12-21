@@ -15,7 +15,7 @@ class Layout
             </head>
             <body>
 <!--            --><?//= self::navbar() ?>
-            <?= isset($_SESSION['uid']) && $_SESSION['uid'] ? 'Zalogowany' : 'Wylogowany' ?>
+<!--            --><?//= isset($_SESSION['uid']) && $_SESSION['uid'] ? 'Zalogowany' : 'Wylogowany' ?>
         <?php
         $html = ob_get_clean();
         return $html;
@@ -24,11 +24,9 @@ class Layout
     public static function bodyPage(){
         ob_start();
         ?>
-            </body>
-                <section class="banner-area" id="bannerArea">
-                    <h1>collect all documents.</h1>
-                </section>
-            </html>
+            <section class="banner-area" id="bannerArea">
+                <h1>collect all documents.</h1>
+            </section>
         <?php
         $html = ob_get_clean();
         return $html;
