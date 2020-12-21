@@ -51,9 +51,20 @@ input{
     margin-top: 30px;
 }
 
-input[type=text], input[type=password]{
+input[type=text], input[type=password],input[type=number]{
     padding: 10px;
     width: 400px;
+}
+
+#amount-in-currency{
+    width: 320px;
+    margin-right: 10px;
+}
+
+#currency{
+    width: 70px;
+    padding: 10px;
+    outline: none;
 }
 
 input[type=submit]{
@@ -100,6 +111,11 @@ header {
 
 }
 
+header h2{
+    font-size: 2rem;
+    color: white;
+}
+
 nav ul li {
     margin: 10px;
 }
@@ -110,13 +126,17 @@ nav ul li {
 
 }
 
+nav a{
+    color: white;
+}
+
+
 a {
     text-decoration: none;
     cursor: pointer;
     opacity: 0.85;
     color: var(--main-font-color);
     font-weight: 200;
-    color: white;
 }
 
 a:hover {

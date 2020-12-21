@@ -8,28 +8,30 @@ class InvoiceViewAdd
         ob_start();
         ?>
         <?= Layout::header() ?>
-        <?= Layout::navbar() ?>
-        <div>
-            <div class="header">
-                <label class="lheader">Dodaj dokument</label>
-            </div>
-            <form>
-                <input type="file" name="upload" accept="application/pdf" /><br>
-
-                <label for="ldate">Data dokumentu</label>
-                <input type="date" id="fdate" name="date" placeholder="YYYY-MM-DD">
-
-                <label for="lname">Strona dokumentu</label>
-                <input type="text" id="lname" name="lastname" placeholder="Cos do wpisania">
-
-                <label for="lnotes">Notatki</label>
-                <input type="text" id="fnotes" name="text" placeholder="Chcesz coś dodać?">
-
-
-                <input type="submit" value="Submit">
+        <section class ="box-section">
+            <form class="box-form" method="post" action="index.php?action=login-set">
+                <div class="title">
+                    <h1 class="title title-large">Invoice</h1>
+                </div>
+                <input id="id-invoice" type="text" name="idinvoice" placeholder="Invoice number">
+                <input id="contractor-data" type="text" name="contractordata" placeholder="Contractor data">
+                <input id="net-amount" type="number" name="netamount" placeholder="Net amount">
+                <input id="gross-amount" type="number" name="grossamont" placeholder="Gross amount">
+                <input id="vat-tax" type="number" name="vattax" placeholder="Vat tax">
+                 <div>
+                     <input id="amount-in-currency" type="number" name="amountincurrency" placeholder="Amount in currency">
+                     <select name="currency" id="currency">
+                         <option value="zloty">ZŁ</option>
+                         <option value="usd">$</option>
+                         <option value="pounds">£</option>
+                         <option value="euro">€</option>
+                     </select>
+                 </div>
+                <input type="file" value="Add Invoice" accept="application/pdf">
+                <input type="submit" value="Add invoice">
+                <a href="#">Powrót</a>
             </form>
-        </div>
-        <?= Layout::footer() ?>
+        </section>
         <?php
         $html = ob_get_clean();
         return $html;
