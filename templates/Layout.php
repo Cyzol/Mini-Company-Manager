@@ -64,14 +64,14 @@ class Layout
         ob_start();
         ?>
         <header>
-            <h2 class="logo"><a href="index.html">M&M</a></h2>
+            <h2 class="logo"><a href="index.php?action=home-page">M&M</a></h2>
             <nav>
                 <ul class="nav_links">
-                    <li><a href="index.php?action=invoice-add">faktura sprzedaży</a></li>
-                    <li><a href="">faktura zakupu</a></li>
-                    <li><a href="">dokumenty</a></li>
-                    <li><a href="">sprzęt</a></li>
-                    <li><a href="">licencje</a></li>
+                    <li><a href="index.php?action=invoice-add">sales invoice</a></li>
+                    <li><a href="">purchase invoice</a></li>
+                    <li><a href="">documents</a></li>
+                    <li><a href="">equipment</a></li>
+                    <li><a href="">license</a></li>
                 </ul>
             </nav>
         </header>
