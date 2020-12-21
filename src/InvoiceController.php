@@ -9,6 +9,12 @@ class InvoiceController
         die("Tu jest invoice list");
     }
 
+    public static function add()
+    {
+        echo InvoiceViewAdd::render();
+        return;
+    }
+
     public static function show()
     {
         $invoiceId = isset($_REQUEST['id']) ? $_REQUEST['id'] : null;

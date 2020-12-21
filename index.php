@@ -14,6 +14,9 @@ switch ($action) {
     case 'invoice-show':
         InvoiceController::show();
         break;
+    case 'invoice-add':
+        InvoiceController::add();
+        break;
     case 'login-set':
         LoginController::set();
         break;
@@ -30,6 +33,6 @@ switch ($action) {
         LoginController::logout();
         break;
     default:
-        header('Location: index.php?action=login');
+        header('Location: index.php?action=home-page');
         break;
 }

@@ -10,3 +10,4 @@ require_once __DIR__ . '/templates/HomePageViewIndex.php';
 require_once __DIR__ . '/src/HomePageController.php';
 require_once __DIR__ . '/templates/RegisterViewIndex.php';
 require_once __DIR__ . '/src/RegisterController.php';
+require_once __DIR__ . '/templates/InvoiceViewAdd.php';
