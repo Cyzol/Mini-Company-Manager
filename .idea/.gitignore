@@ -1,8 +1,1 @@
-# Default ignored files
-/shelf/
-/workspace.xml
-# Datasource local storage ignored files
-/../../../../../../../../../../:\Users\ck44293\Desktop\Semestr 5\Aplikacje Internetowe 1\Projekt PHP\Projekt\Mini-Company-Manager\.idea/dataSources/
-/dataSources.local.xml
-# Editor-based HTTP Client requests
-/httpRequests/
+./.idea/

@@ -25,10 +25,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c59d1874-3b12-4dc4-8617-137c499bc9e0" name="Default Changelist" comment="Parametry połączenia w pliku config.php, Dodane Prepared Statements, parametry do SQL są teraz dodawane w argumentach,a wywołania w środku metod.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-    </list>
+    <list default="true" id="c59d1874-3b12-4dc4-8617-137c499bc9e0" name="Default Changelist" comment="Merge" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,6 +66,7 @@
       <workItem from="1608399773137" duration="1333000" />
       <workItem from="1608481125457" duration="5668000" />
       <workItem from="1608537710216" duration="5313000" />
+      <workItem from="1608555869655" duration="292000" />
     </task>
     <task id="LOCAL-00001" summary="Dodana klasa FakturySprzedazy&#10;Dodana baza danych w formacie .sql">
       <created>1608483348723</created>
@@ -112,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608541544702</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Merge">
+      <created>1608555921795</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1608555921795</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,7 +154,8 @@
     <MESSAGE value="test" />
     <MESSAGE value="test1" />
     <MESSAGE value="Parametry połączenia w pliku config.php, Dodane Prepared Statements, parametry do SQL są teraz dodawane w argumentach,a wywołania w środku metod." />
-    <option name="LAST_COMMIT_MESSAGE" value="Parametry połączenia w pliku config.php, Dodane Prepared Statements, parametry do SQL są teraz dodawane w argumentach,a wywołania w środku metod." />
+    <MESSAGE value="Merge" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge" />
   </component>
   <component name="WindowStateProjectService">
     <state x="667" y="163" key="#PHP" timestamp="1608482372086">
@@ -168,10 +174,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="794" y="443" key="NewPhpFileDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1608537946498" />
-    <state x="645" y="255" key="Vcs.Push.Dialog.v2" timestamp="1608541581915">
+    <state x="645" y="255" key="Vcs.Push.Dialog.v2" timestamp="1608556112991">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="645" y="255" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1608486839664" />
+    <state x="645" y="255" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1608556112991" />
     <state x="645" y="255" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1608541581915" />
     <state x="-1828" y="93" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1608400125419">
       <screen x="-1920" y="1" width="1920" height="1040" />
