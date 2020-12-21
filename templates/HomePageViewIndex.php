@@ -8,8 +8,8 @@ class HomePageViewIndex
         ob_start();
         ?>
         <?= Layout::header() ?>
-        <?= Layout::navbar() ?>
-<!--        --><?//= Layout::bodyPage()?>
+<!--        --><?//= Layout::navbar() ?>
+        <?= Layout::bodyPage()?>
         <?= Layout::footer() ?>
         <?php
         $html = ob_get_clean();

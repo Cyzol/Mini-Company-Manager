@@ -19,15 +19,18 @@
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:Layout" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/main" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bf1df46-6a92-4ff7-808f-dac7276616fc" name="Default Changelist" comment="">
+    <list default="true" id="7bf1df46-6a92-4ff7-808f-dac7276616fc" name="Default Changelist" comment="Update css">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/HomePageViewIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/HomePageViewIndex.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Layout.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Layout.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +79,7 @@
       <option name="presentableId" value="Default" />
       <updated>1608467162050</updated>
       <workItem from="1608467163060" duration="12523000" />
+      <workItem from="1608542075630" duration="30000" />
     </task>
     <task id="LOCAL-00001" summary="Add Login layout to the home page">
       <created>1608474173768</created>
@@ -105,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608482620199</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Update css">
+      <created>1608487492732</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1608487492732</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,7 +133,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="Layout" />
+                        <option value="origin/main" />
                       </list>
                     </value>
                   </entry>
@@ -140,7 +151,8 @@
     <MESSAGE value="Add Login layout to the home page" />
     <MESSAGE value="Add Homepage Controller and Home page View" />
     <MESSAGE value="Update gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update gitignore" />
+    <MESSAGE value="Update css" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update css" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1253" y="164" key="#PHP" timestamp="1608402470621">
@@ -160,10 +172,10 @@
     </state>
     <state x="-1211" y="244" key="NewPhpClassDialog/-1920.1.1920.1040/0.0.1920.1040@-1920.1.1920.1040" timestamp="1608401905698" />
     <state x="709" y="243" key="NewPhpClassDialog/-1920.1.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1608478787726" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1608482661367">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1608487504901">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.1.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1608482661367" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.1.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1608487504901" />
     <state x="-1143" y="435" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1608401352825">
       <screen x="-1920" y="1" width="1920" height="1040" />
     </state>
@@ -172,5 +184,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="181" y="211" width="1424" height="717" key="dock-window-1/-1920.1.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1608470673740" />
+    <state x="740" y="233" key="git4idea.branch.GitSmartOperationDialog" timestamp="1608542102611">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="233" key="git4idea.branch.GitSmartOperationDialog/-1920.1.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1608542102611" />
   </component>
 </project>

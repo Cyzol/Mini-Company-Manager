@@ -24,9 +24,11 @@ class Layout
     public static function bodyPage(){
         ob_start();
         ?>
-            <section class="banner-area" id="bannerArea">
-                <h1>collect all documents.</h1>
-            </section>
+            </body>
+                <section class="banner-area" id="bannerArea">
+                    <h1>collect all documents.</h1>
+                </section>
+            </html>
         <?php
         $html = ob_get_clean();
         return $html;
