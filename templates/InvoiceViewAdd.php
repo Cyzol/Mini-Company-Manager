@@ -9,7 +9,7 @@ class InvoiceViewAdd
         ?>
         <?= Layout::header() ?>
         <section class ="box-section">
-            <form class="box-form" method="post" action="index.php?action=login-set">
+            <form class="box-form" method="post" action="upload.php" enctype="multipart/form-data">
                 <div class="title">
                     <h1 class="title title-large">Invoice</h1>
                 </div>
@@ -27,8 +27,8 @@ class InvoiceViewAdd
                          <option value="euro">€</option>
                      </select>
                  </div>
-                <input type="file" value="Add Invoice" accept="application/pdf">
-                <input type="submit" value="Add invoice">
+                <input type="file" id="fileToUpload" name="fileToUpload" value="Add Invoice" accept="application/pdf">
+                <input type="submit" name="submit" value="Add invoice">
                 <a href="#">Powrót</a>
             </form>
         </section>
