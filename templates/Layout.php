@@ -67,12 +67,11 @@ class Layout
             <h2 class="logo"><a href="index.html">M&M</a></h2>
             <nav>
                 <ul class="nav_links">
-                    <li><a href="index.php?action=login-set">faktura sprzedaży</a></li>
+                    <li><a href="index.php?action=invoice-add">faktura sprzedaży</a></li>
                     <li><a href="">faktura zakupu</a></li>
                     <li><a href="">dokumenty</a></li>
                     <li><a href="">sprzęt</a></li>
                     <li><a href="">licencje</a></li>
-                    <li><a href="">Zaloguj sie</a></li>
                 </ul>
             </nav>
         </header>
