@@ -6,9 +6,9 @@ class LoginViewIndex
         ob_start();
         ?>
             <?= Layout::header() ?>
-            <section class ="login-section">
+            <section class ="box-section">
 
-                <form class="login-form" method="post" action="index.php?action=login-set">
+                <form class="box-form" method="post" action="index.php?action=login-set">
                     <div class="title">
                         <h1 class="title title-large">Sign In</h1>
                     </div>

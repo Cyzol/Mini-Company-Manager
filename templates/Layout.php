@@ -15,7 +15,7 @@ class Layout
             </head>
             <body>
 <!--            --><?//= self::navbar() ?>
-            <?= isset($_SESSION['uid']) && $_SESSION['uid'] ? 'Zalogowany' : 'Wylogowany' ?>
+<!--            --><?//= isset($_SESSION['uid']) && $_SESSION['uid'] ? 'Zalogowany' : 'Wylogowany' ?>
         <?php
         $html = ob_get_clean();
         return $html;
