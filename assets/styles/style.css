@@ -1,0 +1,260 @@
+:root {
+    --main-font-color: #0C0C0C;
+    --main-bg-color: white;
+    --main-font-family:  Lato;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: var(--main-font-family);
+    scroll-behavior: smooth;
+    font-size: 10px;
+    background-color: var(--main-bg-color);
+    color: var(--main-font-color) ;
+}
+
+li,
+a,
+h2 {
+    text-decoration: none;
+    font-weight: 100;
+}
+
+/*HOME PAGE LOGIN*/
+.login-section{
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.login-form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 50vh;
+    background-color: white;
+    padding: 40px;
+    border-radius: 6%;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+input{
+    margin-top: 30px;
+}
+
+input[type=text], input[type=password]{
+    padding: 10px;
+    width: 400px;
+}
+
+input[type=submit]{
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: inherit;
+    cursor: pointer;
+    padding: 1.2rem 4rem;
+    border: none;
+    outline: none;
+    border-radius: 2rem;
+    text-align: center;
+    background-color: #009BD6;
+    margin-bottom: 40px;
+}
+
+label{
+    margin-right: 20px;
+    font-size: 2rem;
+}
+
+.title-large {
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+.title-subs {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: inherit;
+}
+
+::placeholder{
+    font-size: 1.5rem;
+}
+
+/*NAVBAR*/
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 20px 10%;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    position: absolute;
+}
+
+
+nav ul li {
+    margin: 10px;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.85;
+    color: var(--main-font-color);
+    font-weight: 200;
+}
+
+a:hover {
+    opacity: 0.5;
+}
+
+@media(max-width: 800px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+    }
+
+    header a {
+        margin-bottom: 30px;
+    }
+
+    nav ul li a {
+        font-size: 1.6rem;
+
+    }
+}
+
+@media(max-width: 800px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+    }
+
+    header a {
+        margin-bottom: 30px;
+    }
+
+    nav ul li a {
+        font-size: 1.6rem;
+
+    }
+}
+
+@media(max-width: 360px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        min-width: 350px;
+    }
+
+    header a {
+        margin-bottom: 30px;
+    }
+
+    nav ul li a {
+        font-size: 1.2rem;
+
+    }
+}
+
+@keyframes drop {
+    0% {
+        opacity: 0;
+        transform: translateY(-160px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* bannerArea */
+
+.bannerArea {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background: url("/assets/images/b1.jpg") center no-repeat;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.bannerArea h1 {
+    font-size: 8rem;
+    color: var(--main-font-color);
+    animation: drop 1.5s ease;
+}
+
+.bannerArea p {
+    font-size: 1.6rem;
+    animation: leftside 1.5s ease;
+    color: white;
+}
+
+.arrow {
+    display: flex;
+    justify-content: center;
+    font-size: 4rem;
+    align-items: flex-end;
+    height: 20%;
+}
+
+.arrow a {
+    opacity: 0.1;
+}
+
+.arrow a:hover {
+    opacity: 1;
+    transition: 0.6s ease-in;
+}
+
+@media(max-width: 800px) {
+
+    .bannerArea {
+        display: flex;
+        justify-content: center;
+    }
+
+    .bannerArea h1 {
+        font-size: 4.5rem;
+
+    }
+
+}
+
+@media(max-width: 390px) {
+
+    .bannerArea {
+        display: flex;
+        justify-content: center;
+        min-width: 350px;
+    }
+
+    .bannerArea h1 {
+        font-size: 3.5rem;
+    }
+
+}
