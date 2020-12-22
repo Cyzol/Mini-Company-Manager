@@ -14,7 +14,7 @@ class InvoiceViewAdd
                     <h1 class="title title-large">Sales Invoice</h1>
                 </div>
                 <input id="id-invoice" type="text" name="idinvoice" placeholder="Invoice number" required="required" pattern='[/\A-Z0-9]*'>
-                <input id="contractor-data" type="text" name="contractordata" placeholder="Contractor data" required="required" pattern="[A-Za-z0-9]{1,20}">
+                <input id="contractor-data" type="text" name="contractordata" placeholder="Contractor data" required="required" pattern="[\s.a-zA-ZąćęłńóśźżĄĘŁŃÓŚŹŻ0-9]+">
                 <input id="net-amount" type="number" step="0.01" name="netamount" placeholder="Net amount" required="required" pattern="[0-9]{1,10}">
                 <input id="gross-amount" type="number" step="0.01" name="grossamont" placeholder="Gross amount" required="required" pattern="[0-9]{1,10}">
                 <input id="vat-tax" type="number" step="0.01" name="vattax" placeholder="Vat tax" required="required" pattern="[0-9]{1,10}">
