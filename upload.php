@@ -21,11 +21,11 @@ if ($uploadOk == 0) {
     echo "Sorry, your file was not uploaded.";
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-        echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
         $invoice = new Invoice();
         $invoice->insert(array('invoicenumber'=>$_POST['idinvoice'],'contactordata'=>$_POST['contractordata'],'netamount'=>$_POST['netamount'],
-            'grossamount'=>$_POST['grossamont'],'vattax'=>$_POST['vattax'],'amountincurrency'=>$_POST['amountincurrency'],
+            'vattax'=>$_POST['vattax'],'grossamount'=>$_POST['grossamont'],'amountincurrency'=>$_POST['amountincurrency'],
             'currency'=>$_POST['currency'],'url'=>$target_file));
+        echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
     } else {
         echo "Sorry, there was an error uploading your file.";
     }
