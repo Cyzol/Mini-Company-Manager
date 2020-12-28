@@ -18,6 +18,7 @@ class InvoiceViewAdd
                 <input id="net-amount" type="number" step="0.01" name="netamount" placeholder="Net amount" required="required" pattern="[0-9]{1,10}">
                 <input id="gross-amount" type="number" step="0.01" name="grossamont" placeholder="Gross amount" required="required" pattern="[0-9]{1,10}">
                 <input id="vat-tax" type="number" step="0.01" name="vattax" placeholder="Vat tax" required="required" pattern="[0-9]{1,10}">
+                <input id="date-invoice" type="date" name="dateinvoice" placeholder="Date" required="required">
                  <div>
                      <input id="amount-in-currency" type="number" step="0.01" name="amountincurrency" placeholder="Amount in currency" required="required" pattern="[0-9]{1,10}">
                      <select name="currency" id="currency">

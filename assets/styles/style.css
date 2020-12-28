@@ -55,7 +55,7 @@ input{
     margin-top: 30px;
 }
 
-input[type=text], input[type=password],input[type=number]{
+input[type=text], input[type=password],input[type=number],input[type=date]{
     padding: 10px;
     width: 400px;
 }
