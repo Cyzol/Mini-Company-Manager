@@ -14,8 +14,11 @@ switch ($action) {
     case 'invoice-show':
         InvoiceController::show();
         break;
-    case 'invoice-add':
-        InvoiceController::add();
+    case 'sales-invoice-add':
+        InvoiceController::add_sales();
+        break;
+    case 'purchase-invoice-add':
+        InvoiceController::add_purchase();
         break;
     case 'login-set':
         LoginController::set();

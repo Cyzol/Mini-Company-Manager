@@ -9,9 +9,15 @@ class InvoiceController
         die("Tu jest invoice list");
     }
 
-    public static function add()
+    public static function add_sales()
     {
-        echo InvoiceViewAdd::render();
+        echo InvoiceSalesViewAdd::render();
+        return;
+    }
+
+    public static function add_purchase(){
+
+        echo InvoicePurchaseViewAdd::render();
         return;
     }
 

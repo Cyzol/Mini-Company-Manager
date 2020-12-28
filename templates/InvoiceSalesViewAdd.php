@@ -1,7 +1,7 @@
 <?php
 
 
-class InvoiceViewAdd
+class InvoiceSalesViewAdd
 {
     public static function render($params = [])
     {

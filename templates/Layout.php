@@ -67,8 +67,8 @@ class Layout
             <h2 class="logo"><a href="index.php?action=home-page">M&M</a></h2>
             <nav>
                 <ul class="nav_links">
-                    <li><a href="index.php?action=invoice-add">sales invoice</a></li>
-                    <li><a href="">purchase invoice</a></li>
+                    <li><a href="index.php?action=sales-invoice-add">sales invoice</a></li>
+                    <li><a href="index.php?action=purchase-invoice-add">purchase invoice</a></li>
                     <li><a href="">documents</a></li>
                     <li><a href="">equipment</a></li>
                     <li><a href="">license</a></li>
