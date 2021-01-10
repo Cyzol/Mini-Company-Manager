@@ -251,3 +251,30 @@ a:hover {
     }
 }
 
+/* Tiles Section */
+
+.tiles-section{
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 0;
+}
+
+.tile{
+    border-radius: 15%;
+    background-color: #009bd6;
+}
+
+.fa-file-contract,
+.fa-file-invoice-dollar,
+.fa-file-word,
+.fa-book{
+    font-size: 10rem;
+    color: white;
+    padding: 70px;
+}
+
+.fa-laptop{
+    font-size: 10rem;
+    color: white;
+    padding: 60px;
+}

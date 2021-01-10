@@ -10,6 +10,8 @@ class HomePageViewIndex
         <?= Layout::header() ?>
         <?= Layout::navbar() ?>
         <?= Layout::bodyPage()?>
+        <?= Layout::tiles()?>
+
         <?php
         $html = ob_get_clean();
         return $html;
