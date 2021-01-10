@@ -23,6 +23,12 @@ switch ($action) {
     case 'documents-add':
         DocumentsController::add();
         break;
+    case 'equipment-add':
+        EquipmentController::add();
+        break;
+    case 'license-add':
+
+        break;
     case 'login-set':
         LoginController::set();
         break;
