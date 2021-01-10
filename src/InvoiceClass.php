@@ -27,4 +27,84 @@ class InvoiceClass{
     public function getAllParams(){
         return array($this->id,$this->invoiceNumber,$this->contactorData,$this->netAmount,$this->vatTax,$this->grossAmount, $this->saleDate, $this->amountInCurrency,$this->currency,$this->url);
     }
+
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getInvoiceNumber()
+    {
+        return $this->invoiceNumber;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getContactorData()
+    {
+        return $this->contactorData;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getNetAmount()
+    {
+        return $this->netAmount;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getVatTax()
+    {
+        return $this->vatTax;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getGrossAmount()
+    {
+        return $this->grossAmount;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSaleDate()
+    {
+        return $this->saleDate;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getAmountInCurrency()
+    {
+        return $this->amountInCurrency;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCurrency()
+    {
+        return $this->currency;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUrl()
+    {
+        return $this->url;
+    }
 }

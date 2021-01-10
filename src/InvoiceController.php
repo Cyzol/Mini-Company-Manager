@@ -20,7 +20,11 @@ class InvoiceController
     {
         $invoiceRepository = new InvoiceRepository();
 
-        print_r($invoiceRepository);
+        //Tak pobierasz ilość faktur
+        echo sizeof($invoiceRepository->getInvoices());
+        //Tak pobierasz wartość elementu
+        print_r($invoiceRepository->getInvoices()[0]->getId());
+        print_r($invoiceRepository->getInvoices()[0]->getInvoiceNumber());
 
 
 //        $invoiceId = isset($_REQUEST['id']) ? $_REQUEST['id'] : null;
