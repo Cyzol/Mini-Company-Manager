@@ -19,3 +19,4 @@ require_once  __DIR__ . '/src/EquipmentController.php';
 require_once __DIR__ . '/templates/EquipmentViewAdd.php';
 require_once  __DIR__ . '/src/LicenseController.php';
 require_once __DIR__ . '/templates/LicenseViewAdd.php';
+require_once __DIR__ . '/templates/InvoiceView.php';
