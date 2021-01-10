@@ -17,3 +17,5 @@ require_once  __DIR__ . '/src/DocumentsController.php';
 require_once __DIR__ . '/templates/DocumentsViewAdd.php';
 require_once  __DIR__ . '/src/EquipmentController.php';
 require_once __DIR__ . '/templates/EquipmentViewAdd.php';
+require_once  __DIR__ . '/src/LicenseController.php';
+require_once __DIR__ . '/templates/LicenseViewAdd.php';

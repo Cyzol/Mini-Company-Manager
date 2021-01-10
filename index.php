@@ -27,7 +27,7 @@ switch ($action) {
         EquipmentController::add();
         break;
     case 'license-add':
-
+        LicenseController::add();
         break;
     case 'login-set':
         LoginController::set();
