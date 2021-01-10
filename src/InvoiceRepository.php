@@ -13,14 +13,14 @@ class InvoiceRepository
         $this->connection = new PDO($config['dsn'], $config['username'], $config['password']);
         $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $this->connection->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-        $allInvoices = $this->getAllInvoices();
+        $allInvoices = $this->getAllInvoicesFromDB();
         for ($i =0;$i<sizeof($allInvoices);$i++){
-            $singleInvoice = new InvoiceClass($allInvoices[$i]["ID"],$allInvoices[$i]["NumerFaktury"],$allInvoices[$i]["DaneKontrahenta"],$allInvoices[$i]["KwotaNetto"],$allInvoices[$i]["KwotaPodatkuVAT"],$allInvoices[$i]["KwotaBrutto"], $allInvoices[i]["DataSprzedazy"],$allInvoices[$i]["KwotaNettoWWalucie"],$allInvoices[$i]["Waluta"],$allInvoices[$i]["URL"]);
+            $singleInvoice = new InvoiceClass($allInvoices[$i]["ID"],$allInvoices[$i]["NumerFaktury"],$allInvoices[$i]["DaneKontrahenta"],$allInvoices[$i]["KwotaNetto"],$allInvoices[$i]["KwotaPodatkuVAT"],$allInvoices[$i]["KwotaBrutto"], $allInvoices[$i]["DataSprzedazy"],$allInvoices[$i]["KwotaNettoWWalucie"],$allInvoices[$i]["Waluta"],$allInvoices[$i]["URL"]);
             $this->invoicesList[]=$singleInvoice;
         }
     }
 
-    public function getAllInvoices(){
+    public function getAllInvoicesFromDB(){
         try{
             $stmt = $this->connection->prepare('SELECT * FROM fakturysprzedazy');
             $result = $stmt->execute();
@@ -30,8 +30,12 @@ class InvoiceRepository
         }
     }
 
-    public function getInvoice($id)
-    {
-        return ['abc'];
+    public function getInvoices(){
+        return $this->invoicesList;
     }
+
+//    public function getInvoice($id)
+//    {
+//        return ['abc'];
+//    }
 }
