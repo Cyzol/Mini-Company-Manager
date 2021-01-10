@@ -68,7 +68,7 @@ class Layout
             <nav>
                 <ul class="nav_links">
                     <li><a href="index.php?action=invoice-add">sales invoice</a></li>
-                    <li><a href="">purchase invoice</a></li>
+                    <li><a href="index.php?action=purchase-invoice-add">purchase invoice</a></li>
                     <li><a href="">documents</a></li>
                     <li><a href="">equipment</a></li>
                     <li><a href="">license</a></li>
