@@ -11,9 +11,6 @@ switch ($action) {
     case 'invoice-list':
         InvoiceController::index();
         break;
-    case 'invoice-show':
-        InvoiceController::show();
-        break;
     case 'invoice-add':
         InvoiceController::add();
         break;
