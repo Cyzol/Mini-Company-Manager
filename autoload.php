@@ -13,3 +13,5 @@ require_once __DIR__ . '/src/RegisterController.php';
 require_once __DIR__ . '/templates/InvoiceViewAdd.php';
 require_once __DIR__ . '/src/PurchaseInvoiceController.php';
 require_once __DIR__ . '/templates/PurchaseInvoiceViewAdd.php';
+require_once  __DIR__ . '/src/DocumentsController.php';
+require_once __DIR__ . '/templates/DocumentsViewAdd.php';
