@@ -16,6 +16,12 @@ class InvoiceController
         return;
     }
 
+    public static function view()
+    {
+        echo InvoiceView::render();
+        return;
+    }
+
     public static function show()
     {
         $invoiceRepository = new InvoiceRepository();
