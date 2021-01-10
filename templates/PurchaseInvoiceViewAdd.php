@@ -13,7 +13,7 @@ class PurchaseInvoiceViewAdd
                 <div class="title">
                     <h1 class="title title-large">Purchase Invoice</h1>
                 </div>
-                <input id="own-id-invoice-purchase" type="text" name="ownidinvoice" placeholder="Own ID" required="required" pattern='[/\A-Z0-9]*'>
+                <input id="puchase-number" type="text" name="purchaseid" placeholder="Purchase number" required="required" pattern='[/\A-Z0-9]*'>
                 <input id="id-invoice-purchase" type="text" name="idinvoice" placeholder="Invoice number" required="required" pattern='[/\A-Z0-9]*'>
                 <input id="contractor-data-purchase" type="text" name="contractordata" placeholder="Contractor data" required="required" pattern="[\s.a-zA-ZąćęłńóśźżĄĘŁŃÓŚŹŻ0-9]+">
                 <input id="net-amount-purchase" type="number" step="0.01" name="netamount" placeholder="Net amount" required="required" pattern="[0-9]{1,10}">
