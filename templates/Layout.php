@@ -71,7 +71,7 @@ class Layout
                     <li><a href="index.php?action=purchase-invoice-add">purchase invoice</a></li>
                     <li><a href="index.php?action=documents-add">documents</a></li>
                     <li><a href="index.php?action=equipment-add">equipment</a></li>
-                    <li><a href="">license</a></li>
+                    <li><a href="index.php?action=license-add">license</a></li>
                 </ul>
             </nav>
         </header>
