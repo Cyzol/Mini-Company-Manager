@@ -15,7 +15,7 @@ class InvoiceRepository
         $this->connection->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
         $allInvoices = $this->getAllInvoices();
         for ($i =0;$i<sizeof($allInvoices);$i++){
-            $singleInvoice = new InvoiceClass($allInvoices[$i]["ID"],$allInvoices[$i]["NumerFaktury"],$allInvoices[$i]["DaneKontrahenta"],$allInvoices[$i]["KwotaNetto"],$allInvoices[$i]["KwotaPodatkuVAT"],$allInvoices[$i]["KwotaBrutto"],$allInvoices[$i]["KwotaNettoWWalucie"],$allInvoices[$i]["Waluta"],$allInvoices[$i]["URL"]);
+            $singleInvoice = new InvoiceClass($allInvoices[$i]["ID"],$allInvoices[$i]["NumerFaktury"],$allInvoices[$i]["DaneKontrahenta"],$allInvoices[$i]["KwotaNetto"],$allInvoices[$i]["KwotaPodatkuVAT"],$allInvoices[$i]["KwotaBrutto"], $allInvoices[i]["DataSprzedazy"],$allInvoices[$i]["KwotaNettoWWalucie"],$allInvoices[$i]["Waluta"],$allInvoices[$i]["URL"]);
             $this->invoicesList[]=$singleInvoice;
         }
     }
