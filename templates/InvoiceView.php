@@ -3,7 +3,7 @@
 
 class InvoiceView
 {
-    public static function render($params = [])
+    public static function render($invoiceRepository)
     {
         ob_start();
 
@@ -17,47 +17,35 @@ class InvoiceView
                     <th scope="col">Invoice Number</th>
                     <th scope="col">Contractor data</th>
                     <th scope="col">Net amount</th>
-                    <th scope="col">Gross amount</th>
                     <th scope="col">Vat tax</th>
+                    <th scope="col">Gross amount</th>
                     <th scope="col">Date</th>
                     <th scope="col">Amount</th>
+                    <th scope="col">Currency</th>
                     <th scope="col">File</th>
                 </tr>
                 </thead>
                 <tbody>
+                <?php
+                for ($i = 0; $i <sizeof($invoiceRepository->getInvoices()); $i++) {
+
+                ?>
+
                 <tr>
-                    <th scope="row">1</th>
-                    <td>1</td>
-                    <td>123456</td>
-                    <td>12324</td>
-                    <td>23</td>
-                    <td>43</td>
-                    <td>12-12-2020</td>
-                    <td>234.67</td>
-                    <td>Marek/Files/Udostepnioneplikia</td>
+                    <th scope="row"><?php print_r($invoiceRepository->getInvoices()[$i]->getId())?></th>
+                    <td><?php print_r($invoiceRepository->getInvoices()[$i]->getInvoiceNumber())?></td>
+                    <td><?php print_r($invoiceRepository->getInvoices()[$i]->getContactorData())?></td>
+                    <td><?php print_r($invoiceRepository->getInvoices()[$i]->getNetAmount())?></td>
+                    <td><?php print_r($invoiceRepository->getInvoices()[$i]->getVatTax())?></td>
+                    <td><?php print_r($invoiceRepository->getInvoices()[$i]->getGrossAmount())?></td>
+                    <td><?php print_r($invoiceRepository->getInvoices()[$i]->getSaleDate())?></td>
+                    <td><?php print_r($invoiceRepository->getInvoices()[$i]->getAmountInCurrency())?></td>
+                    <td><?php print_r($invoiceRepository->getInvoices()[$i]->getCurrency())?></td>
+                    <td><?php print_r($invoiceRepository->getInvoices()[$i]->getUrl())?></td>
                 </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>1</td>
-                    <td>123456</td>
-                    <td>12324</td>
-                    <td>23</td>
-                    <td>43</td>
-                    <td>12-12-2020</td>
-                    <td>234.67</td>
-                    <td>Marek/Files/Udostepnioneplikia</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>1</td>
-                    <td>123456</td>
-                    <td>12324</td>
-                    <td>23</td>
-                    <td>43</td>
-                    <td>12-12-2020</td>
-                    <td>234.67</td>
-                    <td>Marek/Files/Udostepnioneplikia</td>
-                </tr>
+                    <?php
+                        }
+                    ?>
                 </tbody>
             </table>
         </div>

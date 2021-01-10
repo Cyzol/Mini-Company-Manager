@@ -18,19 +18,23 @@ class InvoiceController
 
     public static function view()
     {
-        echo InvoiceView::render();
+        $invoiceRepository = new InvoiceRepository();
+        echo InvoiceView::render($invoiceRepository);
+
+
+
+        //Tak pobierasz ilość faktur
+//        echo sizeof($invoiceRepository->getInvoices());
+        //Tak pobierasz wartość elementu
+//        print_r($invoiceRepository->getInvoices()[0]->getId());
+//        print_r($invoiceRepository->getInvoices()[0]->getInvoiceNumber());
+
         return;
     }
 
     public static function show()
     {
-        $invoiceRepository = new InvoiceRepository();
 
-        //Tak pobierasz ilość faktur
-        echo sizeof($invoiceRepository->getInvoices());
-        //Tak pobierasz wartość elementu
-        print_r($invoiceRepository->getInvoices()[0]->getId());
-        print_r($invoiceRepository->getInvoices()[0]->getInvoiceNumber());
 
 
 //        $invoiceId = isset($_REQUEST['id']) ? $_REQUEST['id'] : null;
