@@ -20,6 +20,8 @@ class InvoiceController
     {
         $invoiceRepository = new InvoiceRepository();
 
+        print_r($invoiceRepository);
+
 
 //        $invoiceId = isset($_REQUEST['id']) ? $_REQUEST['id'] : null;
 //        if (! $invoiceId) {

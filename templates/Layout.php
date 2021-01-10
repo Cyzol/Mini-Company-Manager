@@ -64,7 +64,7 @@ class Layout
         ob_start();
         ?>
         <section class="tiles-section" id="tilesSection">
-            <div class="tile" id="salesInvoiceTile"><a href="#"><i class="fas fa-file-contract"></i></a></div>
+            <div class="tile" id="salesInvoiceTile"><a href="index.php?action=invoice-show"><i class="fas fa-file-contract"></i></a></div>
             <div class="tile" id="purchaseInvoiceTile"><a href="#"><i class="fas fa-file-invoice-dollar"></i></a></div>
             <div class="tile" id="documentsTile"><a href="#"><i class="fas fa-file-word"></i></a></div>
             <div class="tile" id="equipmentTile"><a href="#"><i class="fas fa-laptop"></i></a></div>
