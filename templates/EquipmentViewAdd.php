@@ -9,14 +9,14 @@ class EquipmentViewAdd
         ?>
         <?= Layout::header() ?>
         <section class ="box-section">
-            <form class="box-form" method="post" action="" enctype="multipart/form-data">
+            <form class="box-form" method="post" action="uploadingFile/uploadEquipment.php" enctype="multipart/form-data">
                 <div class="title">
                     <h1 class="title title-large">Equipment</h1>
                 </div>
                 <input id="id-equipment" type="text" name="idequipment" placeholder="Inventory number" required="required" pattern='[/\A-Z0-9]*'>
 
                 <input id="equipment-name" type="text" name="equipmentname" placeholder="Equipment name" required="required" pattern="[\s.a-zA-ZąćęłńóśźżĄĘŁŃÓŚŹŻ0-9]+">
-                <input id="serial-number" type="text" name="serialnumber" placeholder="Serial number" required="required" pattern="[\s.a-zA-ZąćęłńóśźżĄĘŁŃÓŚŹŻ0-9]+">
+                <input id="serial-number" type="text" name="serialnumber" placeholder="Serial number" required="required" pattern="[-\s.a-zA-ZąćęłńóśźżĄĘŁŃÓŚŹŻ0-9]+">
                 <input id="equipment-date" type="date" name="equipmentdate" placeholder="Date" required="required">
                 <input id="id-invoice-equipment" type="text" name="idinvoiceequipment" placeholder="Invoice number" required="required" pattern='[/\A-Z0-9]*'>
                 <input id="warranty-date" type="date" name="warrantydate" placeholder="Warranty date" required="required">
