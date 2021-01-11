@@ -15,7 +15,9 @@ class Invoice
 
     public function insert($params){
         try{
-            $stmt = $this->connection->prepare('INSERT INTO `fakturysprzedazy` (`ID`, `NumerFaktury`, `DaneKontrahenta`, `KwotaNetto`, `KwotaPodatkuVAT`, `KwotaBrutto`, `DataSprzedazy`, `KwotaNettoWWalucie`, `Waluta`, `URL`) VALUES (NULL, :invoicenumber, :contactordata, :netamount, :vattax, :grossamount, :dateinvoice, :amountincurrency, :currency, :url);');
+            $stmt = $this->connection->prepare('INSERT INTO `fakturysprzedazy` (`ID`, `NumerFaktury`, `DaneKontrahenta`, `KwotaNetto`, `KwotaPodatkuVAT`, 
+`KwotaBrutto`, `DataSprzedazy`, `KwotaNettoWWalucie`, `Waluta`, `URL`) VALUES (NULL, :invoicenumber, :contactordata, :netamount, :vattax, :grossamount, :dateinvoice, 
+:amountincurrency, :currency, :url);');
             $lastInsertId = $this->connection->lastInsertId();
             $result = $stmt->execute($params);
             return $lastInsertId;
