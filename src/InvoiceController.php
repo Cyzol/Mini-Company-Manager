@@ -19,6 +19,7 @@ class InvoiceController
     public static function view()
     {
         $invoiceRepository = new InvoiceRepository();
+        $invoiceRepository->getAllInvoicesFromDB();
         echo InvoiceView::render($invoiceRepository);
 
 
