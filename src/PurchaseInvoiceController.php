@@ -11,4 +11,12 @@ class PurchaseInvoiceController
         return;
     }
 
+    public static function view()
+    {
+        $invoicePurchaseRepository = new InvoicePurchaseRepository();
+        $repository = $invoicePurchaseRepository->getInvoices();
+        echo InvoiceView::render($invoicePurchaseRepository,$repository);
+        return;
+    }
+
 }
