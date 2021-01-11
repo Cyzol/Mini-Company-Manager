@@ -9,4 +9,11 @@ class EquipmentController
         return;
     }
 
+    public static function view()
+    {
+        echo EquipmentView::render();
+        return;
+    }
+
+
 }
