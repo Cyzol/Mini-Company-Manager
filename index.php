@@ -38,6 +38,9 @@ switch ($action) {
     case 'license-add':
         LicenseController::add();
         break;
+    case 'license-view':
+        LicenseController::view();
+        break;
     case 'login-set':
         LoginController::set();
         break;
