@@ -15,7 +15,8 @@ class InvoiceRepository extends AbstractRepository
             $stmt = $this->connection->prepare('SELECT *'.$statement);
             $result = $stmt->execute();
             $allInvoices = $stmt->fetchAll();
-            for ($i =0;$i<sizeof($allInvoices);$i++){
+            $size = $this->countInvoices();
+            for ($i =0;$i<$size;$i++){
                 $singleInvoice = new InvoiceClass();
                 $singleInvoice->setId($allInvoices[$i]["ID"]);
                 $singleInvoice->setInvoiceNumber($allInvoices[$i]["NumerFaktury"]);
@@ -43,9 +44,4 @@ class InvoiceRepository extends AbstractRepository
         $count = $stmt->fetchAll();
         return $count[0]['COUNT(*)'];
     }
-
-//    public function getInvoice($id)
-//    {
-//        return ['abc'];
-//    }
 }
