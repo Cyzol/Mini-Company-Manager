@@ -9,7 +9,7 @@ class PurchaseInvoiceViewAdd
         ?>
         <?= Layout::header() ?>
         <section class ="box-section">
-            <form class="box-form" method="post" action="" enctype="multipart/form-data">
+            <form class="box-form" method="post" action="uploadingFile/uploadPurchaseInvoice.php" enctype="multipart/form-data">
                 <div class="title">
                     <h1 class="title title-large">Purchase Invoice</h1>
                 </div>
