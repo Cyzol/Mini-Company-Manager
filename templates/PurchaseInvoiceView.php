@@ -3,10 +3,9 @@
 
 class PurchaseInvoiceView
 {
-    public static function render()
+    public static function render($repositoryObject,$purchaseInvoiceRepository)
     {
         ob_start();
-
         ?>
         <?= Layout::header() ?>
         <div class="table-wrapper">
@@ -27,6 +26,26 @@ class PurchaseInvoiceView
                 </tr>
                 </thead>
                 <tbody>
+                <?php
+                for ($i = 0; $i <$repositoryObject->countPurchaseInvoices(); $i++) {
+
+                ?>
+                <tr>
+                    <th scope="row"><?php print_r($purchaseInvoiceRepository[$i]->getId())?></th>
+                    <td><?php print_r($purchaseInvoiceRepository[$i]->getPurchaseId())?></td>
+                    <td><?php print_r($purchaseInvoiceRepository[$i]->getIdInvoice())?></td>
+                    <td><?php print_r($purchaseInvoiceRepository[$i]->getContractorData())?></td>
+                    <td><?php print_r($purchaseInvoiceRepository[$i]->getNetAmount())?></td>
+                    <td><?php print_r($purchaseInvoiceRepository[$i]->getGrossAmount())?></td>
+                    <td><?php print_r($purchaseInvoiceRepository[$i]->getVatTax())?></td>
+                    <td><?php print_r($purchaseInvoiceRepository[$i]->getDateInvoice())?></td>
+                    <td><?php print_r($purchaseInvoiceRepository[$i]->getAmountInCurrency())?></td>
+                    <td><?php print_r($purchaseInvoiceRepository[$i]->getCurrency())?></td>
+                    <td><?php print_r($purchaseInvoiceRepository[$i]->getFileToUpload())?></td>
+                </tr>
+                <?php
+                    }
+                ?>
                 </tbody>
             </table>
         </div>
