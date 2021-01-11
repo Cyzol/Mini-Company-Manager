@@ -11,4 +11,10 @@ class PurchaseInvoiceController
         return;
     }
 
+    public static function view()
+    {
+        echo PurchaseInvoiceView::render();
+        return;
+    }
+
 }

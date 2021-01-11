@@ -27,6 +27,7 @@ class Layout
         ?>
             <section class="banner-area" id="bannerArea">
                 <h1>collect all documents.</h1>
+                <div class="arrow"><a href="#tilesSection">&#8595;</a></div>
             </section>
         <?php
         $html = ob_get_clean();
@@ -64,11 +65,15 @@ class Layout
         ob_start();
         ?>
         <section class="tiles-section" id="tilesSection">
-            <div class="tile" id="salesInvoiceTile"><a href="index.php?action=invoice-view"><i class="fas fa-file-contract"></i></a></div>
-            <div class="tile" id="purchaseInvoiceTile"><a href="#"><i class="fas fa-file-invoice-dollar"></i></a></div>
-            <div class="tile" id="documentsTile"><a href="#"><i class="fas fa-file-word"></i></a></div>
-            <div class="tile" id="equipmentTile"><a href="#"><i class="fas fa-laptop"></i></a></div>
-            <div class="tile" id="licenseTile""><a href="#"><i class="fas fa-book"></i></a></div>
+            <h2>View all documents</h2>
+            <div class="tiles">
+                <div class="tile" id="salesInvoiceTile"><a href="index.php?action=invoice-view"><i class="fas fa-file-contract"></i><span>Sales Invoice</span></a></div>
+                <div class="tile" id="purchaseInvoiceTile"><a href="index.php?action=purchase-invoice-view"><i class="fas fa-file-invoice-dollar"></i><span>Purchase Invoice</span></a></div>
+                <div class="tile" id="documentsTile"><a href="#"><i class="fas fa-file-word"></i><span>Documents</span></a></div>
+                <div class="tile" id="equipmentTile"><a href="#"><i class="fas fa-laptop"></i><span>Equipment</span></a></div>
+                <div class="tile" id="licenseTile""><a href="#"><i class="fas fa-book"></i><span>License</span></a></div>
+            </div>
+
         </section>
         <?php
         $html = ob_get_clean();

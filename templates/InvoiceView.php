@@ -6,7 +6,6 @@ class InvoiceView
     public static function render($repositoryObject,$invoiceRepository)
     {
         ob_start();
-
         ?>
         <?= Layout::header() ?>
         <div class="table-wrapper">
