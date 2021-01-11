@@ -20,16 +20,7 @@ class InvoiceController
     {
         $invoiceRepository = new InvoiceRepository();
         $repository = $invoiceRepository->getInvoices();
-        echo InvoiceView::render($repository);
-
-
-
-        //Tak pobierasz ilość faktur
-//        echo sizeof($invoiceRepository->getInvoices());
-        //Tak pobierasz wartość elementu
-//        print_r($invoiceRepository->getInvoices()[0]->getId());
-//        print_r($invoiceRepository->getInvoices()[0]->getInvoiceNumber());
-
+        echo InvoiceView::render($invoiceRepository,$repository);
         return;
     }
 

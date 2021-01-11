@@ -8,10 +8,11 @@ class InvoiceRepository extends AbstractRepository
 {
     public $invoicesList = array();
 
-    public function getInvoices(){
+    public function getInvoices($invoiceNumber=null,$contractorData=null,$amountInCurrency=null){
         try{
             $this->invoicesList = array();
-            $stmt = $this->connection->prepare('SELECT * FROM fakturysprzedazy');
+            $statement =  'FROM fakturysprzedazy';
+            $stmt = $this->connection->prepare('SELECT *'.$statement);
             $result = $stmt->execute();
             $allInvoices = $stmt->fetchAll();
             for ($i =0;$i<sizeof($allInvoices);$i++){
@@ -33,6 +34,14 @@ class InvoiceRepository extends AbstractRepository
         }catch(Exception $e){
             throw new Exception($e->getMessage());
         }
+    }
+
+    public function countInvoices($invoiceNumber=null,$contractorData=null,$amountInCurrency=null){
+        $statement = 'FROM fakturysprzedazy';
+        $stmt = $this->connection->prepare('SELECT COUNT(*)'.$statement);
+        $result = $stmt->execute();
+        $count = $stmt->fetchAll();
+        return $count[0]['COUNT(*)'];
     }
 
 //    public function getInvoice($id)

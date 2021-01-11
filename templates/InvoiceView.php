@@ -3,7 +3,7 @@
 
 class InvoiceView
 {
-    public static function render($invoiceRepository)
+    public static function render($repositoryObject,$invoiceRepository)
     {
         ob_start();
 
@@ -27,7 +27,7 @@ class InvoiceView
                 </thead>
                 <tbody>
                 <?php
-                for ($i = 0; $i <sizeof($invoiceRepository); $i++) {
+                for ($i = 0; $i <$repositoryObject->countInvoices(); $i++) {
 
                 ?>
 
