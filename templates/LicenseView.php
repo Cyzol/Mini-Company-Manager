@@ -9,6 +9,10 @@ class LicenseView
 
         ?>
         <?= Layout::header() ?>
+        <?= Layout::backToHomePage() ?>
+        <div class="header-table">
+            <h1>License</h1>
+        </div>
         <div class="table-wrapper">
             <table class="fl-table">
                 <thead>

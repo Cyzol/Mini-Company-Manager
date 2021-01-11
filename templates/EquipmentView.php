@@ -9,6 +9,10 @@ class EquipmentView
 
         ?>
         <?= Layout::header() ?>
+        <?= Layout::backToHomePage() ?>
+        <div class="header-table">
+            <h1>Equipment</h1>
+        </div>
         <div class="table-wrapper">
             <table class="fl-table">
                 <thead>
