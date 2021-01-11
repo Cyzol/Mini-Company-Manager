@@ -3,7 +3,7 @@
 
 class PurchaseInvoiceView
 {
-    public static function render($repositoryObject,$invoicePurchaseRepository)
+    public static function render()
     {
         ob_start();
 
