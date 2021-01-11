@@ -2,7 +2,7 @@
 class InvoiceClass{
     private $id;
     private $invoiceNumber;
-    private $contactorData;
+    private $contractorData;
     private $netAmount;
     private $vatTax;
     private $grossAmount;
@@ -11,8 +11,19 @@ class InvoiceClass{
     private $currency;
     private $url;
 
-    public function getAllParams(){
-        return array($this->id,$this->invoiceNumber,$this->contactorData,$this->netAmount,$this->vatTax,$this->grossAmount, $this->saleDate, $this->amountInCurrency,$this->currency,$this->url);
+    public function serialize(){
+        return [
+            'id' => $this->getId(),
+            'invoiceNumber' => $this->getInvoiceNumber(),
+            'contractorData' => $this->getContactorData(),
+            'netAmount' => $this->getNetAmount(),
+            'vatTax' => $this->getVatTax(),
+            'grossAmount' => $this->getGrossAmount(),
+            'saleDate' => $this->getSaleDate(),
+            'amountInCurrency' => $this->getAmountInCurrency(),
+            'currency' => $this->getCurrency(),
+            'url' => $this->getUrl(),
+        ];
     }
 
     /**
@@ -52,15 +63,15 @@ class InvoiceClass{
      */
     public function getContactorData()
     {
-        return $this->contactorData;
+        return $this->contractorData;
     }
 
     /**
-     * @param mixed $contactorData
+     * @param mixed $contractorData
      */
-    public function setContactorData($contactorData)
+    public function setContactorData($contractorData)
     {
-        $this->contactorData = $contactorData;
+        $this->contractorData = $contractorData;
     }
 
     /**
