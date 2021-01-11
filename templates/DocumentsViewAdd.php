@@ -9,7 +9,7 @@ class DocumentsViewAdd
         ?>
         <?= Layout::header() ?>
         <section class ="box-section">
-            <form class="box-form" method="post" action="" enctype="multipart/form-data">
+            <form class="box-form" method="post" action="uploadingFile/uploadDocuments.php" enctype="multipart/form-data">
                 <div class="title">
                     <h1 class="title title-large">Documents</h1>
                 </div>
