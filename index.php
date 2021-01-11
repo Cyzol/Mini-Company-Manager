@@ -26,6 +26,9 @@ switch ($action) {
     case 'documents-add':
         DocumentsController::add();
         break;
+    case 'documents-view':
+        DocumentsController::view();
+        break;
     case 'equipment-add':
         EquipmentController::add();
         break;

@@ -9,4 +9,10 @@ class DocumentsController
         echo DocumentsViewAdd::render();
         return;
     }
+
+    public static function view()
+    {
+        echo DocumentsView::render();
+        return;
+    }
 }
