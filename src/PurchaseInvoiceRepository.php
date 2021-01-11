@@ -4,13 +4,13 @@ require_once __DIR__ . './../database/config.php';
 require_once __DIR__ . './PurchaseInvoiceClass.php';
 require_once __DIR__ . './AbstractRepository.php';
 
-class PurchaseInvoiceRepository
+class PurchaseInvoiceRepository extends AbstractRepository
 {
     public $purchaseInvoicesList = array();
 
-    public function getPurchaseInvoices(){
+    public function getPurchaseInvoices($invoiceNumber=null,$contractorData=null,$amountInCurrency=null){
         try{
-            $this->purchaseInvoicesList = array($invoiceNumber=null,$contractorData=null,$amountInCurrency=null);
+            $this->purchaseInvoicesList = array();
             $statement =  'FROM fakturyzakupu';
             $stmt = $this->connection->prepare('SELECT *'.$statement);
             $result = $stmt->execute();
