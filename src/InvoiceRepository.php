@@ -15,7 +15,17 @@ class InvoiceRepository
         $this->connection->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
         $allInvoices = $this->getAllInvoicesFromDB();
         for ($i =0;$i<sizeof($allInvoices);$i++){
-            $singleInvoice = new InvoiceClass($allInvoices[$i]["ID"],$allInvoices[$i]["NumerFaktury"],$allInvoices[$i]["DaneKontrahenta"],$allInvoices[$i]["KwotaNetto"],$allInvoices[$i]["KwotaPodatkuVAT"],$allInvoices[$i]["KwotaBrutto"], $allInvoices[$i]["DataSprzedazy"],$allInvoices[$i]["KwotaNettoWWalucie"],$allInvoices[$i]["Waluta"],$allInvoices[$i]["URL"]);
+            $singleInvoice = new InvoiceClass();
+            $singleInvoice->setId($allInvoices[$i]["ID"]);
+            $singleInvoice->setInvoiceNumber($allInvoices[$i]["NumerFaktury"]);
+            $singleInvoice->setContactorData($allInvoices[$i]["DaneKontrahenta"]);
+            $singleInvoice->setNetAmount($allInvoices[$i]["KwotaNetto"]);
+            $singleInvoice->setVatTax($allInvoices[$i]["KwotaPodatkuVAT"]);
+            $singleInvoice->setGrossAmount($allInvoices[$i]["KwotaBrutto"]);
+            $singleInvoice->setSaleDate($allInvoices[$i]["DataSprzedazy"]);
+            $singleInvoice->setAmountInCurrency($allInvoices[$i]["KwotaNettoWWalucie"]);
+            $singleInvoice->setCurrency($allInvoices[$i]["Waluta"]);
+            $singleInvoice->setUrl($allInvoices[$i]["URL"]);
             $this->invoicesList[]=$singleInvoice;
         }
     }

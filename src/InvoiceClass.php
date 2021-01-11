@@ -11,19 +11,6 @@ class InvoiceClass{
     private $currency;
     private $url;
 
-    public function __construct($id,$invoiceNumber,$contactorData,$netAmount,$vatTax,$grossAmount, $saleDate,$amountInCurrency,$currency,$url){
-        $this->id = $id;
-        $this->invoiceNumber = $invoiceNumber;
-        $this->contactorData = $contactorData;
-        $this->netAmount = $netAmount;
-        $this->vatTax = $vatTax;
-        $this->grossAmount = $grossAmount;
-        $this->saleDate = $saleDate;
-        $this->amountInCurrency = $amountInCurrency;
-        $this->currency = $currency;
-        $this->url = $url;
-    }
-
     public function getAllParams(){
         return array($this->id,$this->invoiceNumber,$this->contactorData,$this->netAmount,$this->vatTax,$this->grossAmount, $this->saleDate, $this->amountInCurrency,$this->currency,$this->url);
     }
@@ -37,11 +24,27 @@ class InvoiceClass{
     }
 
     /**
+     * @param mixed $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    /**
      * @return mixed
      */
     public function getInvoiceNumber()
     {
         return $this->invoiceNumber;
+    }
+
+    /**
+     * @param mixed $invoiceNumber
+     */
+    public function setInvoiceNumber($invoiceNumber)
+    {
+        $this->invoiceNumber = $invoiceNumber;
     }
 
     /**
@@ -53,11 +56,27 @@ class InvoiceClass{
     }
 
     /**
+     * @param mixed $contactorData
+     */
+    public function setContactorData($contactorData)
+    {
+        $this->contactorData = $contactorData;
+    }
+
+    /**
      * @return mixed
      */
     public function getNetAmount()
     {
         return $this->netAmount;
+    }
+
+    /**
+     * @param mixed $netAmount
+     */
+    public function setNetAmount($netAmount)
+    {
+        $this->netAmount = $netAmount;
     }
 
     /**
@@ -69,11 +88,27 @@ class InvoiceClass{
     }
 
     /**
+     * @param mixed $vatTax
+     */
+    public function setVatTax($vatTax)
+    {
+        $this->vatTax = $vatTax;
+    }
+
+    /**
      * @return mixed
      */
     public function getGrossAmount()
     {
         return $this->grossAmount;
+    }
+
+    /**
+     * @param mixed $grossAmount
+     */
+    public function setGrossAmount($grossAmount)
+    {
+        $this->grossAmount = $grossAmount;
     }
 
     /**
@@ -85,11 +120,27 @@ class InvoiceClass{
     }
 
     /**
+     * @param mixed $saleDate
+     */
+    public function setSaleDate($saleDate)
+    {
+        $this->saleDate = $saleDate;
+    }
+
+    /**
      * @return mixed
      */
     public function getAmountInCurrency()
     {
         return $this->amountInCurrency;
+    }
+
+    /**
+     * @param mixed $amountInCurrency
+     */
+    public function setAmountInCurrency($amountInCurrency)
+    {
+        $this->amountInCurrency = $amountInCurrency;
     }
 
     /**
@@ -101,10 +152,26 @@ class InvoiceClass{
     }
 
     /**
+     * @param mixed $currency
+     */
+    public function setCurrency($currency)
+    {
+        $this->currency = $currency;
+    }
+
+    /**
      * @return mixed
      */
     public function getUrl()
     {
         return $this->url;
+    }
+
+    /**
+     * @param mixed $url
+     */
+    public function setUrl($url)
+    {
+        $this->url = $url;
     }
 }
