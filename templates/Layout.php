@@ -71,7 +71,7 @@ class Layout
                 <div class="tile" id="purchaseInvoiceTile"><a href="index.php?action=purchase-invoice-view"><i class="fas fa-file-invoice-dollar"></i><span>Purchase Invoice</span></a></div>
                 <div class="tile" id="documentsTile"><a href="index.php?action=documents-view"><i class="fas fa-file-word"></i><span>Documents</span></a></div>
                 <div class="tile" id="equipmentTile"><a href="index.php?action=equipment-view"><i class="fas fa-laptop"></i><span>Equipment</span></a></div>
-                <div class="tile" id="licenseTile""><a href="#"><i class="fas fa-book"></i><span>License</span></a></div>
+                <div class="tile" id="licenseTile""><a href="index.php?action=license-view"><i class="fas fa-book"></i><span>License</span></a></div>
             </div>
 
         </section>

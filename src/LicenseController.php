@@ -10,4 +10,10 @@ class LicenseController
         return;
     }
 
+    public static function view()
+    {
+        echo LicenseView::render();
+        return;
+    }
+
 }
