@@ -6,10 +6,11 @@ require_once __DIR__ . './AbstractRepository.php';
 
 class InvoiceRepository extends AbstractRepository
 {
-    private $invoicesList = array();
+    public $invoicesList = array();
 
-    public function getAllInvoicesFromDB(){
+    public function getInvoices(){
         try{
+            $this->invoicesList = array();
             $stmt = $this->connection->prepare('SELECT * FROM fakturysprzedazy');
             $result = $stmt->execute();
             $allInvoices = $stmt->fetchAll();
@@ -27,14 +28,11 @@ class InvoiceRepository extends AbstractRepository
                 $singleInvoice->setUrl($allInvoices[$i]["URL"]);
                 $this->invoicesList[]=$singleInvoice;
             }
+            return $this->invoicesList;
 
         }catch(Exception $e){
             throw new Exception($e->getMessage());
         }
-    }
-
-    public function getInvoices(){
-        return $this->invoicesList;
     }
 
 //    public function getInvoice($id)
