@@ -2,7 +2,7 @@
 class InvoiceClass{
     private $id;
     private $invoiceNumber;
-    private $contactorData;
+    private $contractorData;
     private $netAmount;
     private $vatTax;
     private $grossAmount;
@@ -11,21 +11,19 @@ class InvoiceClass{
     private $currency;
     private $url;
 
-    public function __construct($id,$invoiceNumber,$contactorData,$netAmount,$vatTax,$grossAmount, $saleDate,$amountInCurrency,$currency,$url){
-        $this->id = $id;
-        $this->invoiceNumber = $invoiceNumber;
-        $this->contactorData = $contactorData;
-        $this->netAmount = $netAmount;
-        $this->vatTax = $vatTax;
-        $this->grossAmount = $grossAmount;
-        $this->saleDate = $saleDate;
-        $this->amountInCurrency = $amountInCurrency;
-        $this->currency = $currency;
-        $this->url = $url;
-    }
-
-    public function getAllParams(){
-        return array($this->id,$this->invoiceNumber,$this->contactorData,$this->netAmount,$this->vatTax,$this->grossAmount, $this->saleDate, $this->amountInCurrency,$this->currency,$this->url);
+    public function serialize(){
+        return [
+            'id' => $this->getId(),
+            'invoiceNumber' => $this->getInvoiceNumber(),
+            'contractorData' => $this->getContactorData(),
+            'netAmount' => $this->getNetAmount(),
+            'vatTax' => $this->getVatTax(),
+            'grossAmount' => $this->getGrossAmount(),
+            'saleDate' => $this->getSaleDate(),
+            'amountInCurrency' => $this->getAmountInCurrency(),
+            'currency' => $this->getCurrency(),
+            'url' => $this->getUrl(),
+        ];
     }
 
     /**
@@ -37,6 +35,14 @@ class InvoiceClass{
     }
 
     /**
+     * @param mixed $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    /**
      * @return mixed
      */
     public function getInvoiceNumber()
@@ -45,11 +51,27 @@ class InvoiceClass{
     }
 
     /**
+     * @param mixed $invoiceNumber
+     */
+    public function setInvoiceNumber($invoiceNumber)
+    {
+        $this->invoiceNumber = $invoiceNumber;
+    }
+
+    /**
      * @return mixed
      */
     public function getContactorData()
     {
-        return $this->contactorData;
+        return $this->contractorData;
+    }
+
+    /**
+     * @param mixed $contractorData
+     */
+    public function setContactorData($contractorData)
+    {
+        $this->contractorData = $contractorData;
     }
 
     /**
@@ -61,11 +83,27 @@ class InvoiceClass{
     }
 
     /**
+     * @param mixed $netAmount
+     */
+    public function setNetAmount($netAmount)
+    {
+        $this->netAmount = $netAmount;
+    }
+
+    /**
      * @return mixed
      */
     public function getVatTax()
     {
         return $this->vatTax;
+    }
+
+    /**
+     * @param mixed $vatTax
+     */
+    public function setVatTax($vatTax)
+    {
+        $this->vatTax = $vatTax;
     }
 
     /**
@@ -77,11 +115,27 @@ class InvoiceClass{
     }
 
     /**
+     * @param mixed $grossAmount
+     */
+    public function setGrossAmount($grossAmount)
+    {
+        $this->grossAmount = $grossAmount;
+    }
+
+    /**
      * @return mixed
      */
     public function getSaleDate()
     {
         return $this->saleDate;
+    }
+
+    /**
+     * @param mixed $saleDate
+     */
+    public function setSaleDate($saleDate)
+    {
+        $this->saleDate = $saleDate;
     }
 
     /**
@@ -93,6 +147,14 @@ class InvoiceClass{
     }
 
     /**
+     * @param mixed $amountInCurrency
+     */
+    public function setAmountInCurrency($amountInCurrency)
+    {
+        $this->amountInCurrency = $amountInCurrency;
+    }
+
+    /**
      * @return mixed
      */
     public function getCurrency()
@@ -101,10 +163,26 @@ class InvoiceClass{
     }
 
     /**
+     * @param mixed $currency
+     */
+    public function setCurrency($currency)
+    {
+        $this->currency = $currency;
+    }
+
+    /**
      * @return mixed
      */
     public function getUrl()
     {
         return $this->url;
+    }
+
+    /**
+     * @param mixed $url
+     */
+    public function setUrl($url)
+    {
+        $this->url = $url;
     }
 }

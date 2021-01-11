@@ -2,36 +2,46 @@
 require_once __DIR__ . '/../autoload.php';
 require_once __DIR__ . './../database/config.php';
 require_once __DIR__ . './InvoiceClass.php';
+require_once __DIR__ . './AbstractRepository.php';
 
-class InvoiceRepository
+class InvoiceRepository extends AbstractRepository
 {
-    private $connection = null;
-    private $invoicesList = array();
+    public $invoicesList = array();
 
-    public function __construct(){
-        global $config;
-        $this->connection = new PDO($config['dsn'], $config['username'], $config['password']);
-        $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $this->connection->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-        $allInvoices = $this->getAllInvoicesFromDB();
-        for ($i =0;$i<sizeof($allInvoices);$i++){
-            $singleInvoice = new InvoiceClass($allInvoices[$i]["ID"],$allInvoices[$i]["NumerFaktury"],$allInvoices[$i]["DaneKontrahenta"],$allInvoices[$i]["KwotaNetto"],$allInvoices[$i]["KwotaPodatkuVAT"],$allInvoices[$i]["KwotaBrutto"], $allInvoices[$i]["DataSprzedazy"],$allInvoices[$i]["KwotaNettoWWalucie"],$allInvoices[$i]["Waluta"],$allInvoices[$i]["URL"]);
-            $this->invoicesList[]=$singleInvoice;
-        }
-    }
-
-    public function getAllInvoicesFromDB(){
+    public function getInvoices($invoiceNumber=null,$contractorData=null,$amountInCurrency=null){
         try{
-            $stmt = $this->connection->prepare('SELECT * FROM fakturysprzedazy');
+            $this->invoicesList = array();
+            $statement =  'FROM fakturysprzedazy';
+            $stmt = $this->connection->prepare('SELECT *'.$statement);
             $result = $stmt->execute();
-            return $stmt->fetchAll();
+            $allInvoices = $stmt->fetchAll();
+            for ($i =0;$i<sizeof($allInvoices);$i++){
+                $singleInvoice = new InvoiceClass();
+                $singleInvoice->setId($allInvoices[$i]["ID"]);
+                $singleInvoice->setInvoiceNumber($allInvoices[$i]["NumerFaktury"]);
+                $singleInvoice->setContactorData($allInvoices[$i]["DaneKontrahenta"]);
+                $singleInvoice->setNetAmount($allInvoices[$i]["KwotaNetto"]);
+                $singleInvoice->setVatTax($allInvoices[$i]["KwotaPodatkuVAT"]);
+                $singleInvoice->setGrossAmount($allInvoices[$i]["KwotaBrutto"]);
+                $singleInvoice->setSaleDate($allInvoices[$i]["DataSprzedazy"]);
+                $singleInvoice->setAmountInCurrency($allInvoices[$i]["KwotaNettoWWalucie"]);
+                $singleInvoice->setCurrency($allInvoices[$i]["Waluta"]);
+                $singleInvoice->setUrl($allInvoices[$i]["URL"]);
+                $this->invoicesList[]=$singleInvoice;
+            }
+            return $this->invoicesList;
+
         }catch(Exception $e){
             throw new Exception($e->getMessage());
         }
     }
 
-    public function getInvoices(){
-        return $this->invoicesList;
+    public function countInvoices($invoiceNumber=null,$contractorData=null,$amountInCurrency=null){
+        $statement = 'FROM fakturysprzedazy';
+        $stmt = $this->connection->prepare('SELECT COUNT(*)'.$statement);
+        $result = $stmt->execute();
+        $count = $stmt->fetchAll();
+        return $count[0]['COUNT(*)'];
     }
 
 //    public function getInvoice($id)

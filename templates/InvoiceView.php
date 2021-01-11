@@ -3,7 +3,7 @@
 
 class InvoiceView
 {
-    public static function render($invoiceRepository)
+    public static function render($repositoryObject,$invoiceRepository)
     {
         ob_start();
 
@@ -27,21 +27,21 @@ class InvoiceView
                 </thead>
                 <tbody>
                 <?php
-                for ($i = 0; $i <sizeof($invoiceRepository->getInvoices()); $i++) {
+                for ($i = 0; $i <$repositoryObject->countInvoices(); $i++) {
 
                 ?>
 
                 <tr>
-                    <th scope="row"><?php print_r($invoiceRepository->getInvoices()[$i]->getId())?></th>
-                    <td><?php print_r($invoiceRepository->getInvoices()[$i]->getInvoiceNumber())?></td>
-                    <td><?php print_r($invoiceRepository->getInvoices()[$i]->getContactorData())?></td>
-                    <td><?php print_r($invoiceRepository->getInvoices()[$i]->getNetAmount())?></td>
-                    <td><?php print_r($invoiceRepository->getInvoices()[$i]->getVatTax())?></td>
-                    <td><?php print_r($invoiceRepository->getInvoices()[$i]->getGrossAmount())?></td>
-                    <td><?php print_r($invoiceRepository->getInvoices()[$i]->getSaleDate())?></td>
-                    <td><?php print_r($invoiceRepository->getInvoices()[$i]->getAmountInCurrency())?></td>
-                    <td><?php print_r($invoiceRepository->getInvoices()[$i]->getCurrency())?></td>
-                    <td><?php print_r($invoiceRepository->getInvoices()[$i]->getUrl())?></td>
+                    <th scope="row"><?php print_r($invoiceRepository[$i]->getId())?></th>
+                    <td><?php print_r($invoiceRepository[$i]->getInvoiceNumber())?></td>
+                    <td><?php print_r($invoiceRepository[$i]->getContactorData())?></td>
+                    <td><?php print_r($invoiceRepository[$i]->getNetAmount())?></td>
+                    <td><?php print_r($invoiceRepository[$i]->getVatTax())?></td>
+                    <td><?php print_r($invoiceRepository[$i]->getGrossAmount())?></td>
+                    <td><?php print_r($invoiceRepository[$i]->getSaleDate())?></td>
+                    <td><?php print_r($invoiceRepository[$i]->getAmountInCurrency())?></td>
+                    <td><?php print_r($invoiceRepository[$i]->getCurrency())?></td>
+                    <td><?php print_r($invoiceRepository[$i]->getUrl())?></td>
                 </tr>
                     <?php
                         }
