@@ -3,7 +3,7 @@
 
 class LicenseView
 {
-    public static function render()
+    public static function render($repositoryObject,$licensesRepository)
     {
         ob_start();
 
@@ -29,6 +29,26 @@ class LicenseView
                 </tr>
                 </thead>
                 <tbody>
+                <?php
+                for ($i = 0; $i <$repositoryObject->countLicenses(); $i++) {
+
+                    ?>
+
+                    <tr>
+                        <th scope="row"><?php print_r($licensesRepository[$i]->getId())?></th>
+                        <td><?php print_r($licensesRepository[$i]->getIdlicense())?></td>
+                        <td><?php print_r($licensesRepository[$i]->getLicensename())?></td>
+                        <td><?php print_r($licensesRepository[$i]->getSerialnumberlicense())?></td>
+                        <td><?php print_r($licensesRepository[$i]->getLicensepurchasedate())?></td>
+                        <td><?php print_r($licensesRepository[$i]->getIdinvoicelicense())?></td>
+                        <td><?php print_r($licensesRepository[$i]->getSupportdate())?></td>
+                        <td><?php print_r($licensesRepository[$i]->getAmountInCurrency())?></td>
+                        <td><?php print_r($licensesRepository[$i]->getValidtodate())?></td>
+                        <td><?php print_r($licensesRepository[$i]->getLicenseowner())?></td>
+                    </tr>
+                    <?php
+                }
+                ?>
                 </tbody>
             </table>
         </div>

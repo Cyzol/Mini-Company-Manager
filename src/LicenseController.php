@@ -12,7 +12,9 @@ class LicenseController
 
     public static function view()
     {
-        echo LicenseView::render();
+        $licensesRepository = new LicenseRepository();
+        $repository = $licensesRepository->getLicenses();
+        echo LicenseView::render($licensesRepository,$repository);
         return;
     }
 
