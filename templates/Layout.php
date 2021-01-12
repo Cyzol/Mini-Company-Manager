@@ -80,6 +80,8 @@ class Layout
         return $html;
     }
 
+
+
     public static function backToHomePage()
     {
         ob_start();

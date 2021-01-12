@@ -11,6 +11,9 @@ class InvoiceView
         <?= Layout::backToHomePage() ?>
         <div class="header-table">
             <h1>Sales Invoice</h1>
+            <div class="searchbar-section">
+                <input type="text" id="searchInput" placeholder="Search..">
+            </div>
         </div>
         <div class="table-wrapper">
             <table class="fl-table">
