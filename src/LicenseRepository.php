@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . '/../autoload.php';
 require_once __DIR__ . './../database/config.php';
+require_once __DIR__ . './LicenseClass.php';
 require_once __DIR__ . './AbstractRepository.php';
 
 class LicenseRepository extends AbstractRepository
@@ -27,7 +28,7 @@ class LicenseRepository extends AbstractRepository
                 $singleLicense->setValidtodate($allLicenses[$i]["LicencjaWaznaDo"]);
                 $singleLicense->setLicenseowner($allLicenses[$i]["NaCzyimStanie"]);
                 $singleLicense->setLicensenotes($allLicenses[$i]["Notatki"]);
-                $this->licesesList[]=$singleLicense;
+                $this->licensesList[]=$singleLicense;
             }
             return $this->licensesList;
 
