@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . '/../autoload.php';
+require_once __DIR__ . './EquipmentRepository.php';
 
 class EquipmentController
 {
@@ -11,7 +12,9 @@ class EquipmentController
 
     public static function view()
     {
-        echo EquipmentView::render();
+        $equipmentRepository = new EquipmentRepository();
+        $repository = $equipmentRepository->getEquipments();
+        echo EquipmentView::render($equipmentRepository, $repository);
         return;
     }
 
