@@ -12,6 +12,7 @@ class InvoiceView
         <div class="header-table">
             <h1>Sales Invoice</h1>
         </div>
+        <?= Layout::searchbar()?>
         <div class="table-wrapper">
             <table class="fl-table">
                 <thead>
