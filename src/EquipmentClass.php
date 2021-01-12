@@ -1,6 +1,5 @@
 <?php
 
-
 class EquipmentClass
 {
     private $id;
