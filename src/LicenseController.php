@@ -17,5 +17,4 @@ class LicenseController
         echo LicenseView::render($licensesRepository,$repository);
         return;
     }
-
 }
