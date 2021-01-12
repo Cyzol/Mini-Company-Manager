@@ -33,7 +33,8 @@ CREATE TABLE `dokumenty` (
   `DataDokumentu` date NOT NULL,
   `Nadawca` varchar(255) NOT NULL,
   `Adresat` varchar(255) NOT NULL,
-  `Notatki` varchar(10000) NOT NULL
+  `Notatki` varchar(10000) NOT NULL,
+  `URL` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
