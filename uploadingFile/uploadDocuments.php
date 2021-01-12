@@ -23,7 +23,7 @@ if ($uploadOk == 0) {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
         $Documents = new Documents();
         $Documents->insert(array('iddocument'=>$_POST['iddocument'],'dateinvoice'=>$_POST['dateinvoice'],'sender'=>$_POST['sender'],
-            'recipient'=>$_POST['recipient'],'notes'=>$_POST['notes']));
+            'recipient'=>$_POST['recipient'],'notes'=>$_POST['notes'],'url'=>$target_file));
         echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
     } else {
         echo "Sorry, there was an error uploading your file.";

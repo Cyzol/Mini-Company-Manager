@@ -15,8 +15,8 @@ class Documents
 
     public function insert($params){
         try{
-            $stmt = $this->connection->prepare('INSERT INTO `dokumenty` (`ID`, `IdentyfikatorDokumentu`, `DataDokumentu`, `Nadawca`, `Adresat`, `Notatki`)
-                VALUES (NULL, :iddocument, :dateinvoice, :sender, :recipient, :notes );');
+            $stmt = $this->connection->prepare('INSERT INTO `dokumenty` (`ID`, `IdentyfikatorDokumentu`, `DataDokumentu`, `Nadawca`, `Adresat`, `Notatki`, `URL`)
+                VALUES (NULL, :iddocument, :dateinvoice, :sender, :recipient, :notes, :url);');
             $lastInsertId = $this->connection->lastInsertId();
             $result = $stmt->execute($params);
             return $lastInsertId;
