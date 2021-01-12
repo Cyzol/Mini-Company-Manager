@@ -17,6 +17,7 @@ class LicenseView
             <table class="fl-table">
                 <thead>
                 <tr>
+                    <th scope="col">ID</th>
                     <th scope="col">Inventory number</th>
                     <th scope="col">License name</th>
                     <th scope="col">Serial number</th>
@@ -42,9 +43,9 @@ class LicenseView
                         <td><?php print_r($licensesRepository[$i]->getLicensepurchasedate())?></td>
                         <td><?php print_r($licensesRepository[$i]->getIdinvoicelicense())?></td>
                         <td><?php print_r($licensesRepository[$i]->getSupportdate())?></td>
-                        <td><?php print_r($licensesRepository[$i]->getAmountInCurrency())?></td>
                         <td><?php print_r($licensesRepository[$i]->getValidtodate())?></td>
                         <td><?php print_r($licensesRepository[$i]->getLicenseowner())?></td>
+                        <td><?php print_r($licensesRepository[$i]->getLicensenotes())?></td>
                     </tr>
                     <?php
                 }

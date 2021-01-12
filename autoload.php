@@ -24,5 +24,3 @@ require_once __DIR__ . '/templates/PurchaseInvoiceView.php';
 require_once __DIR__ . '/templates/DocumentsView.php';
 require_once __DIR__ . '/templates/EquipmentView.php';
 require_once __DIR__ . '/templates/LicenseView.php';
-require_once __DIR__ . '/src/LicenseClass.php';
-require_once __DIR__ . '/src/LicenseRepository.php';
