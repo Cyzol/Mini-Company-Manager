@@ -91,6 +91,18 @@ class Layout
         $html = ob_get_clean();
         return $html;
     }
+    public static function searchbar()
+    {
+        ob_start();
+        ?>
+        <div class="searchbar-section">
+            <input type="text" id="searchInput" placeholder="Search..">
+        </div>
+        <?php
+        $html = ob_get_clean();
+        return $html;
+    }
+
     public static function navbar()
     {
         ob_start();
