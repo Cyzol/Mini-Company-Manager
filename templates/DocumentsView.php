@@ -3,7 +3,7 @@
 
 class DocumentsView
 {
-    public static function render()
+    public static function render($repositoryObject,$documentsRepository)
     {
         ob_start();
 
@@ -27,6 +27,21 @@ class DocumentsView
                 </tr>
                 </thead>
                 <tbody>
+                    <?php
+                    for ($i = 0; $i <$repositoryObject->countDocuments(); $i++) {
+                    ?>
+                        <tr>
+                            <th scope="row"><?php print_r($documentsRepository[$i]->getId())?></th>
+                            <td><?php print_r($documentsRepository[$i]->getIddocument())?></td>
+                            <td><?php print_r($documentsRepository[$i]->getDateinvoice())?></td>
+                            <td><?php print_r($documentsRepository[$i]->getSender())?></td>
+                            <td><?php print_r($documentsRepository[$i]->getRecipient())?></td>
+                            <td><?php print_r($documentsRepository[$i]->getNotes())?></td>
+                            <td><?php print_r($documentsRepository[$i]->getUrl())?></td>
+                        </tr>
+                    <?php
+                        }
+                    ?>
                 </tbody>
             </table>
         </div>
