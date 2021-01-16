@@ -96,8 +96,58 @@ class Layout
         ob_start();
         ?>
         <div class="searchbar-section">
-            <input type="text" id="searchInput" placeholder="Search..">
+            <input type="text" id="searchInput" placeholder="Invoice number">
+            <input type="text" id="searchInput" placeholder="">
         </div>
+        <?php
+        $html = ob_get_clean();
+        return $html;
+    }
+
+    public static function searchbarInvoice()
+    {
+        ob_start();
+        ?>
+                <div class="searchbar-section">
+                    <form role="search" method="post" class="search-form form" action="">
+                        <input type="search" class="search-field" placeholder="Id" value="" name="s" title="" />
+                        <input type="search" class="search-field" placeholder="Invoice Number" value="" name="s" title="" />
+                        <input type="search" class="search-field" placeholder="Contractor data" value="" name="s" title="" />
+                        <input type="search" class="search-field" placeholder="Vat" value="" name="s" title="" />
+                        <div>
+                            <label>Date From: </label>
+                            <select class="search-field select-width" >
+
+                                <option></option>
+                                <?php
+                                for ($i = 1901; $i <=2021; $i++) {
+
+                                    ?>
+                                    <option value="<?php print_r($i)?>"> <?php print_r($i)?></option>
+                                    <?php
+                                }
+                                ?>
+                            </select>
+                        </div>
+                        <div>
+                            <label>Date To: </label>
+                            <select class="search-field select-width" >
+                                <option></option>
+                                <?php
+                                for ($i = 1901; $i <=2021; $i++) {
+
+                                    ?>
+                                    <option value="<?php print_r($i)?>"> <?php print_r($i)?></option>
+                                    <?php
+                                }
+                                ?>
+                            </select>
+
+                        </div>
+                        <input class="submit-button" type="submit" name="submit" value="Filter">
+
+                    </form>
+                </div>
         <?php
         $html = ob_get_clean();
         return $html;
