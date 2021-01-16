@@ -104,6 +104,51 @@ class Layout
         return $html;
     }
 
+    public static function searchbarDocuments(){
+        ob_start();
+        ?>
+        <div class="searchbar-section-documents">
+            <form role="search" method="post" class="search-form form" action="">
+                <input type="search" class="search-field" placeholder="Document Name" value="" name="s" title="" />
+                <div>
+                    <label>Date From: </label>
+                    <select class="search-field select-width" >
+
+                        <option></option>
+                        <?php
+                        for ($i = 1901; $i <=2021; $i++) {
+
+                            ?>
+                            <option value="<?php print_r($i)?>"> <?php print_r($i)?></option>
+                            <?php
+                        }
+                        ?>
+                    </select>
+                </div>
+                <div>
+                    <label>Date To: </label>
+                    <select class="search-field select-width" >
+                        <option></option>
+                        <?php
+                        for ($i = 1901; $i <=2021; $i++) {
+
+                            ?>
+                            <option value="<?php print_r($i)?>"> <?php print_r($i)?></option>
+                            <?php
+                        }
+                        ?>
+                    </select>
+
+                </div>
+                <input class="submit-button" type="submit" name="submit" value="Filter">
+
+            </form>
+        </div>
+        <?php
+        $html = ob_get_clean();
+        return $html;
+    }
+
     public static function searchbarInvoice()
     {
         ob_start();

@@ -13,7 +13,7 @@ class DocumentsView
         <div class="header-table">
             <h1>Documents</h1>
         </div>
-        <?= Layout::searchbar()?>
+        <?= Layout::searchbarDocuments()?>
         <div class="table-wrapper">
             <table class="fl-table">
                 <thead>
