@@ -13,7 +13,7 @@ class EquipmentView
         <div class="header-table">
             <h1>Equipment</h1>
         </div>
-        <?= Layout::searchbar()?>
+        <?= Layout::searchbarEquipment() ?>
         <div class="table-wrapper">
             <table class="fl-table">
                 <thead>

@@ -91,13 +91,17 @@ class Layout
         $html = ob_get_clean();
         return $html;
     }
-    public static function searchbar()
-    {
+
+    public static function searchbarEquipment(){
         ob_start();
         ?>
-        <div class="searchbar-section">
-            <input type="text" id="searchInput" placeholder="Invoice number">
-            <input type="text" id="searchInput" placeholder="">
+        <div class="searchbar-section-equipment">
+            <form role="search" method="post" class="search-form form" action="">
+                <input type="search" class="search-field" placeholder="Serial number" value="" name="s" title="" />
+                <input type="search" class="search-field" placeholder="Inventory number" value="" name="s" title="" />
+                <input class="submit-button" type="submit" name="submit" value="Filter">
+
+            </form>
         </div>
         <?php
         $html = ob_get_clean();
