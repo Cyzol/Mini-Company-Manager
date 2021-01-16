@@ -408,6 +408,11 @@ input:focus {
     margin: auto;
 }
 
+.searchbar-section-equipment{
+    width: 30vw;
+    margin: auto;
+}
+
 .searchbar-section-documents{
     width: 40vw;
     margin: auto;
