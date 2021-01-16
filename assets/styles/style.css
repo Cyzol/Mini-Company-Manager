@@ -378,7 +378,6 @@ a:hover {
     padding: 20px;
 }
 
-
 input:focus {
     outline-offset: -2px;
 }
@@ -406,6 +405,11 @@ input:focus {
 
 .searchbar-section{
     width: 90vw;
+    margin: auto;
+}
+
+.searchbar-section-documents{
+    width: 40vw;
     margin: auto;
 }
 
