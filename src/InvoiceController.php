@@ -24,6 +24,19 @@ class InvoiceController
         return;
     }
 
+    public static function search(){
+        $netAmount = $_POST['searchBarNetAmount'];
+        $invoiceNumber = $_POST['searchBarInvoiceNumber'];
+        $contractor = $_POST['searchBarContractor'];
+        $grossAmount = $_POST['searchBarGrossAmount'];
+
+        $invoiceRepository = new InvoiceRepository();
+        $repository = $invoiceRepository->getInvoices($netAmount, $invoiceNumber, $contractor, $grossAmount);
+        echo InvoiceView::render($invoiceRepository, $repository);
+
+        return;
+    }
+
     public static function show()
     {
 

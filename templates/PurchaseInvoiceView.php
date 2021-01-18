@@ -12,7 +12,7 @@ class PurchaseInvoiceView
         <div class="header-table">
             <h1>Purchase Invoice</h1>
         </div>
-        <?= Layout::searchbarInvoice()?>
+        <?= Layout::searchbarInvoice('index.php?action=purchase-invoice-search')?>
         <div class="table-wrapper">
             <table class="fl-table">
                 <thead>
@@ -32,7 +32,7 @@ class PurchaseInvoiceView
                 </thead>
                 <tbody>
                 <?php
-                for ($i = 0; $i <$repositoryObject->countPurchaseInvoices(); $i++) {
+                for ($i = 0; $i < sizeof($purchaseInvoiceRepository); $i++) {
 
                 ?>
                 <tr>

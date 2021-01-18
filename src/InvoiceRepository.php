@@ -8,14 +8,53 @@ class InvoiceRepository extends AbstractRepository
 {
     public $invoicesList = array();
 
-    public function getInvoices($invoiceNumber=null,$contractorData=null,$amountInCurrency=null){
+    public function getInvoices($netAmount=null, $invoiceNumber=null, $contractorData=null,$grossAmount=null){
+
+        $statement = '';
+        $where = ' WHERE ';
+        $and = ' AND ';
+        $flag = 0;
+        $apo = "'";
+
+        if($netAmount != null){
+            $statement = $where.'KwotaNetto = '.$netAmount;
+            $flag = 1;
+        }
+        if($invoiceNumber != null){
+            if($flag == 0){
+                $statement = $where.'NumerFaktury = '.$invoiceNumber;
+                $flag = 1;
+            }
+            else{
+                $statement = $statement.$and.'NumerFaktury = '.$invoiceNumber;
+            }
+        }
+        if($contractorData != null){
+            if($flag == 0){
+                $statement = $where.'DaneKontrahenta = '.$apo.$contractorData.$apo;
+                $flag = 1;
+            }
+            else{
+                $statement = $statement.$and.'DaneKontrahenta = '.$apo.$contractorData.$apo;
+            }
+        }
+        if($grossAmount != null){
+            if($flag == 0){
+                $statement = $where.'KwotaBrutto = '.$grossAmount;
+                $flag = 1;
+            }
+            else{
+                $statement = $statement.$and.'KwotaBrutto = '.$grossAmount;
+            }
+        }
+
+
         try{
             $this->invoicesList = array();
-            $statement =  'FROM fakturysprzedazy';
-            $stmt = $this->connection->prepare('SELECT *'.$statement);
+            $stmt = $this->connection->prepare('SELECT * FROM fakturysprzedazy'.$statement);
             $result = $stmt->execute();
             $allInvoices = $stmt->fetchAll();
-            $size = $this->countInvoices();
+            $size = $this->countInvoices($statement);
             for ($i =0;$i<$size;$i++){
                 $singleInvoice = new InvoiceClass();
                 $singleInvoice->setId($allInvoices[$i]["ID"]);
@@ -37,9 +76,8 @@ class InvoiceRepository extends AbstractRepository
         }
     }
 
-    public function countInvoices($invoiceNumber=null,$contractorData=null,$amountInCurrency=null){
-        $statement = 'FROM fakturysprzedazy';
-        $stmt = $this->connection->prepare('SELECT COUNT(*)'.$statement);
+    public function countInvoices($statement=null){
+        $stmt = $this->connection->prepare('SELECT COUNT(*) FROM fakturysprzedazy'.$statement);
         $result = $stmt->execute();
         $count = $stmt->fetchAll();
         return $count[0]['COUNT(*)'];

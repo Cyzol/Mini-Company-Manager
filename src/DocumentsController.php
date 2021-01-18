@@ -18,4 +18,17 @@ class DocumentsController
         echo DocumentsView::render($documentsRepository,$repository);
         return;
     }
+
+    public static function search(){
+        $documentNumber = $_POST['searchBarDocumentNumber'];
+        $sender = $_POST['searchBarSender'];
+        $recipient = $_POST['searchBarRecipient'];
+
+        $DocumentsRepository = new DocumentsRepository();
+        $repository = $DocumentsRepository->getInvoices($documentNumber, $sender, $recipient);
+        echo DocumentsView::render($DocumentsRepository, $repository);
+
+        return;
+    }
+
 }

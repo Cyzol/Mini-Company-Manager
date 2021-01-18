@@ -17,17 +17,26 @@ switch ($action) {
     case 'invoice-view':
         InvoiceController::view();
         break;
+    case 'invoice-search':
+        InvoiceController::search();
+        break;
     case 'purchase-invoice-add':
         PurchaseInvoiceController::add();
         break;
     case 'purchase-invoice-view':
         PurchaseInvoiceController::view();
         break;
+    case 'purchase-invoice-search':
+        PurchaseInvoiceController::search();
+        break;
     case 'documents-add':
         DocumentsController::add();
         break;
     case 'documents-view':
         DocumentsController::view();
+        break;
+    case 'documents-search':
+        DocumentsController::search();
         break;
     case 'equipment-add':
         EquipmentController::add();

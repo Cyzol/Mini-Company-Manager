@@ -29,7 +29,7 @@ class DocumentsView
                 </thead>
                 <tbody>
                     <?php
-                    for ($i = 0; $i <$repositoryObject->countDocuments(); $i++) {
+                    for ($i = 0; $i < sizeof($documentsRepository); $i++) {
                     ?>
                         <tr>
                             <th scope="row"><?php print_r($documentsRepository[$i]->getId())?></th>

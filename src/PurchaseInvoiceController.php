@@ -20,4 +20,17 @@ class PurchaseInvoiceController
         return;
     }
 
+    public static function search(){
+        $netAmount = $_POST['searchBarNetAmount'];
+        $invoiceNumber = $_POST['searchBarInvoiceNumber'];
+        $contractor = $_POST['searchBarContractor'];
+        $grossAmount = $_POST['searchBarGrossAmount'];
+
+        $PurchaseInvoiceRepository = new PurchaseInvoiceRepository();
+        $repository = $PurchaseInvoiceRepository->getPurchaseInvoices($netAmount, $invoiceNumber, $contractor, $grossAmount);
+        echo PurchaseInvoiceView::render($PurchaseInvoiceRepository, $repository);
+
+        return;
+    }
+
 }

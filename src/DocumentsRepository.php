@@ -8,14 +8,43 @@ class DocumentsRepository extends AbstractRepository
 {
     public $documentslist = array();
 
-    public function getInvoices($invoiceNumber=null,$contractorData=null,$amountInCurrency=null){
+    public function getInvoices($documentNumber = null, $sender = null, $recipient = null){
+
+        $statement = '';
+        $where = ' WHERE ';
+        $and = ' AND ';
+        $flag = 0;
+        $apo = "'";
+
+        if($documentNumber != null){
+            $statement = $where.'IdentyfikatorDokumentu = '.$documentNumber;
+            $flag = 1;
+        }
+        if($sender != null){
+            if($flag == 0){
+                $statement = $where.'Nadawca = '.$apo.$sender.$apo;
+                $flag = 1;
+            }
+            else{
+                $statement = $statement.$and.'Nadawca = '.$apo.$sender.$apo;
+            }
+        }
+        if($recipient != null){
+            if($flag == 0){
+                $statement = $where.'Adresat = '.$apo.$recipient.$apo;
+                $flag = 1;
+            }
+            else{
+                $statement = $statement.$and.'Adresat = '.$apo.$recipient.$apo;
+            }
+        }
+
         try{
             $this->documentsList = array();
-            $statement =  'FROM dokumenty';
-            $stmt = $this->connection->prepare('SELECT *'.$statement);
+            $stmt = $this->connection->prepare('SELECT * FROM dokumenty'.$statement);
             $result = $stmt->execute();
             $allDocuments = $stmt->fetchAll();
-            $size = $this->countDocuments();
+            $size = $this->countDocuments($statement);
             for ($i =0;$i<$size;$i++){
                 $singleDocument = new DocumentsClass();
                 $singleDocument->setId($allDocuments[$i]["ID"]);
@@ -34,9 +63,8 @@ class DocumentsRepository extends AbstractRepository
         }
     }
 
-    public function countDocuments($invoiceNumber=null,$contractorData=null,$amountInCurrency=null){
-        $statement = 'FROM dokumenty';
-        $stmt = $this->connection->prepare('SELECT COUNT(*)'.$statement);
+    public function countDocuments($statement){
+        $stmt = $this->connection->prepare('SELECT COUNT(*) FROM dokumenty'.$statement);
         $result = $stmt->execute();
         $count = $stmt->fetchAll();
         return $count[0]['COUNT(*)'];
