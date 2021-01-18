@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 20 Gru 2020, 13:32
+-- Czas generowania: 18 Sty 2021, 14:09
 -- Wersja serwera: 10.4.11-MariaDB
 -- Wersja PHP: 7.4.6
 
@@ -113,6 +113,19 @@ CREATE TABLE `sprzet` (
   `Notatki` varchar(1000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `users`
+--
+
+CREATE TABLE `users` (
+  `ID` int(11) NOT NULL,
+  `Username` varchar(256) NOT NULL,
+  `Password` varchar(256) NOT NULL,
+  `Role` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 --
 -- Indeksy dla zrzutów tabel
 --
@@ -148,6 +161,12 @@ ALTER TABLE `sprzet`
   ADD PRIMARY KEY (`ID`);
 
 --
+-- Indeksy dla tabeli `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`ID`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -179,6 +198,12 @@ ALTER TABLE `licencje`
 -- AUTO_INCREMENT dla tabeli `sprzet`
 --
 ALTER TABLE `sprzet`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT dla tabeli `users`
+--
+ALTER TABLE `users`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
