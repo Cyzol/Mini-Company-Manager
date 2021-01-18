@@ -96,9 +96,9 @@ class Layout
         ob_start();
         ?>
         <div class="searchbar-section-equipment">
-            <form role="search" method="post" class="search-form form" action="">
-                <input type="search" class="search-field" placeholder="Serial number" value="" name="s" title="" />
-                <input type="search" class="search-field" placeholder="Inventory number" value="" name="s" title="" />
+            <form role="search" method="post" class="search-form form" action="index.php?action=equipment-search">
+                <input type="search" class="search-field" placeholder="Serial number" value="" name="serialNumber" title="" />
+                <input type="search" class="search-field" placeholder="Inventory number" value="" name="inventoryNumber" title="" />
                 <input class="submit-button" type="submit" name="submit" value="Filter">
 
             </form>

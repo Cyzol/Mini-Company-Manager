@@ -8,14 +8,34 @@ class EquipmentRepository extends AbstractRepository
 {
     public $equipmentList = array();
 
-    public function getEquipments(){
+    public function getEquipments($serialNumber = null, $inventoryNumber = null){
+
+        $statement = '';
+        $where = ' WHERE ';
+        $and = ' AND ';
+        $flag = 0;
+        $apo = "'";
+
+        if($serialNumber != null){
+            $statement = $where.'NumerSeryjny = '.$apo.$serialNumber.$apo;
+            $flag = 1;
+        }
+        if($inventoryNumber != null){
+            if($flag == 0){
+                $statement = $where.'NumerInwentarzowy = '.$inventoryNumber;
+                $flag = 1;
+            }
+            else{
+                $statement = $statement.$and.'NumerInwentarzowy = '.$inventoryNumber;
+            }
+        }
+
         try{
             $this->equipmentList = array();
-            $statement =  'FROM sprzet';
-            $stmt = $this->connection->prepare('SELECT *'.$statement);
+            $stmt = $this->connection->prepare('SELECT * FROM sprzet'.$statement);
             $result = $stmt->execute();
             $allEquipments = $stmt->fetchAll();
-            $size = $this->countEquipments();
+            $size = $this->countEquipments($statement);
             for ($i =0;$i<$size;$i++){
                 $singleEquipment = new EquipmentClass();
                 $singleEquipment->setId($allEquipments[$i]["ID"]);
@@ -39,9 +59,8 @@ class EquipmentRepository extends AbstractRepository
         }
     }
 
-    public function countEquipments($invoiceNumber=null,$contractorData=null,$amountInCurrency=null){
-        $statement = 'FROM sprzet';
-        $stmt = $this->connection->prepare('SELECT COUNT(*)'.$statement);
+    public function countEquipments($statement){
+        $stmt = $this->connection->prepare('SELECT COUNT(*) FROM sprzet'.$statement);
         $result = $stmt->execute();
         $count = $stmt->fetchAll();
         return $count[0]['COUNT(*)'];

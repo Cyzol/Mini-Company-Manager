@@ -44,6 +44,9 @@ switch ($action) {
     case 'equipment-view':
         EquipmentController::view();
         break;
+    case 'equipment-search':
+        EquipmentController::search();
+        break;
     case 'license-add':
         LicenseController::add();
         break;
