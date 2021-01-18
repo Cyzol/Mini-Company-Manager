@@ -29,9 +29,12 @@ class InvoiceController
         $invoiceNumber = $_POST['searchBarInvoiceNumber'];
         $contractor = $_POST['searchBarContractor'];
         $grossAmount = $_POST['searchBarGrossAmount'];
+        $dateFrom = $_POST['dateFrom'];
+        $dateTo = $_POST['dateTo'];
+
 
         $invoiceRepository = new InvoiceRepository();
-        $repository = $invoiceRepository->getInvoices($netAmount, $invoiceNumber, $contractor, $grossAmount);
+        $repository = $invoiceRepository->getInvoices($netAmount, $invoiceNumber, $contractor, $grossAmount, $dateFrom, $dateTo);
         echo InvoiceView::render($invoiceRepository, $repository);
 
         return;

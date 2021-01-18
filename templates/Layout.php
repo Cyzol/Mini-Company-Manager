@@ -168,33 +168,11 @@ class Layout
                         <input type="search" class="search-field" placeholder="Gross amount" value="" name="searchBarGrossAmount" title="" pattern="[0-9]{1,10}" />
                         <div>
                             <label>Date From: </label>
-                            <select class="search-field select-width" >
-
-                                <option></option>
-                                <?php
-                                for ($i = 1901; $i <=2021; $i++) {
-
-                                    ?>
-                                    <option value="<?php print_r($i)?>"> <?php print_r($i)?></option>
-                                    <?php
-                                }
-                                ?>
-                            </select>
+                            <input type="date" class="search-field" name="dateFrom"/>
                         </div>
                         <div>
                             <label>Date To: </label>
-                            <select class="search-field select-width" >
-                                <option></option>
-                                <?php
-                                for ($i = 1901; $i <=2021; $i++) {
-
-                                    ?>
-                                    <option value="<?php print_r($i)?>"> <?php print_r($i)?></option>
-                                    <?php
-                                }
-                                ?>
-                            </select>
-
+                            <input type="date" class="search-field" name="dateTo"/>
                         </div>
                         <input class="submit-button" type="submit" name="submit" value="Filter">
 
