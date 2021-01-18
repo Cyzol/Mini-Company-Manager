@@ -29,12 +29,14 @@ switch ($action) {
     case 'purchase-invoice-search':
         PurchaseInvoiceController::search();
         break;
-
     case 'documents-add':
         DocumentsController::add();
         break;
     case 'documents-view':
         DocumentsController::view();
+        break;
+    case 'documents-search':
+        DocumentsController::search();
         break;
     case 'equipment-add':
         EquipmentController::add();

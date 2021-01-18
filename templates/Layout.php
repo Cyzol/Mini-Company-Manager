@@ -112,8 +112,10 @@ class Layout
         ob_start();
         ?>
         <div class="searchbar-section-documents">
-            <form role="search" method="post" class="search-form form" action="">
-                <input type="search" class="search-field" placeholder="Document Name" value="" name="s" title="" />
+            <form role="search" method="post" class="search-form form" action="index.php?action=documents-search">
+                <input type="search" class="search-field" placeholder="Document Number" value="" name="searchBarDocumentNumber" title="" />
+                <input type="search" class="search-field" placeholder="Sender" value="" name="searchBarSender" title="" />
+                <input type="search" class="search-field" placeholder="Recipient" value="" name="searchBarRecipient" title="" />
                 <div>
                     <label>Date From: </label>
                     <select class="search-field select-width" >
