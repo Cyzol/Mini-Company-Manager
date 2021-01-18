@@ -1,7 +1,7 @@
 <?php
 
-//phpinfo(); die();
 require_once __DIR__ . '/autoload.php';
+require_once __DIR__ . '/login/currentUserObject.php';
 
 session_start();
 
@@ -12,10 +12,16 @@ switch ($action) {
         InvoiceController::index();
         break;
     case 'invoice-add':
-        InvoiceController::add();
+        if ($currentUser->canUploadInvoice())
+            InvoiceController::add();
+        else
+            HomePageController::index();
         break;
     case 'invoice-view':
-        InvoiceController::view();
+        if ($currentUser->canViewInvoice())
+            InvoiceController::view();
+        else
+            HomePageController::index();
         break;
     case 'invoice-search':
         InvoiceController::search();
@@ -57,7 +63,7 @@ switch ($action) {
         LicenseController::search();
         break;
     case 'login-set':
-        LoginController::set();
+        LoginController::set($currentUser);
         break;
     case 'login':
         LoginController::index();

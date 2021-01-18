@@ -9,16 +9,19 @@ class LoginController
         return;
     }
 
-
-
-    public static function set()
+    public static function set(&$currentUser)
     {
-        // tutaj jakaś logika
-        print_r($_REQUEST);
-
-        $_SESSION['uid'] = 42;
-
-        die("Tu jest ustawianie sesji");
+        $username = $_POST["username"];
+        $password = $_POST["password"];
+        $user = $currentUser->getUserFromRepository($username,$password);
+        if ($user->getUsername()!=null AND $user->getPassword()!=null AND $user->getRole()!=null){
+            $currentUser->setUser($user);
+            $_SESSION["LoggedIn"] = true;
+            $_SESSION["Username"] = $currentUser->getUser()->getUsername();
+            $_SESSION["Role"] = $currentUser->getUser()->getRole();
+        }
+        print_r($currentUser);
+        header('Location: index.php?action=home-page');
     }
 
     public static function logout()

@@ -13,7 +13,7 @@ class LoginViewIndex
                         <h1 class="title title-large">Sign In</h1>
                     </div>
                     <input id="user-name" type="text" name="username" placeholder="Username">
-                    <input id="user-password" type="text" name="password" placeholder="Password">
+                    <input id="user-password" type="password" name="password" placeholder="Password">
                     <input type="submit" value="Login">
                     <p class="title title-subs">New user? <span><a href="#" class="linktext">Create an account</a></span></p>
                 </form>

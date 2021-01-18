@@ -1,7 +1,7 @@
 <?php
-require_once '../autoload.php';
-require_once '../database/config.php';
-require_once './userClass.php';
+require_once __DIR__ . '/../autoload.php';
+require_once __DIR__ . '/../database/config.php';
+require_once __DIR__ . '/./userClass.php';
 
 class userRepository
 {
@@ -18,17 +18,20 @@ class userRepository
             $stmt = $this->connection->prepare("SELECT * FROM users WHERE Username='".$username."' AND Password='".$password."';");
             $result = $stmt->execute();
             $userDB = $stmt->fetchAll();
+            $user = new UserClass();
             if ($userDB==null){
-                return null;
+                $user->setId(null);
+                $user->setUsername(null);
+                $user->setPassword(null);
+                $user->setRole(null);
             }
             else{
-                $user = new UserClass();
-                $user->setId($userDB["ID"]);
-                $user->setUsername($userDB["Username"]);
-                $user->setPassword($userDB["Password"]);
-                $user->setRole($userDB["Role"]);
-                return $user;
+                $user->setId($userDB[0]["ID"]);
+                $user->setUsername($userDB[0]["Username"]);
+                $user->setPassword($userDB[0]["Password"]);
+                $user->setRole($userDB[0]["Role"]);
             }
+            return $user;
         }catch(Exception $e){
             throw new Exception($e->getMessage());
         }

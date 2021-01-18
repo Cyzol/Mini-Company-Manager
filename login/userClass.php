@@ -1,15 +1,30 @@
 <?php
-require_once '../autoload.php';
+require_once __DIR__ . '/../autoload.php';
 
 class userClass
 {
-    private $id;
-    private $username;
-    private $password;
-    private $role;
+    public $id;
+    public $username;
+    public $password;
+    public $role;
     //0 - admin
     //1 - auditor
-    //2 - amployee
+    //2 - employee
+
+    public function hasRole($role){
+        if(isset($_SESSION['LoggedIn']) AND isset($_SESSION['Username']) AND isset($_SESSION['Role'])) {
+            if ($_SESSION["Role"] == $role) {
+                return True;
+            }
+        }
+        return False;
+//        if ($this->role == $role) {
+//            return true;
+//        }
+//        else{
+//            return false;
+//        }
+    }
 
     /**
      * @return mixed
