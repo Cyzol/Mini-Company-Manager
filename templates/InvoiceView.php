@@ -12,7 +12,7 @@ class InvoiceView
         <div class="header-table">
             <h1>Sales Invoice</h1>
         </div>
-        <?= Layout::searchbarInvoice()?>
+        <?= Layout::searchbarInvoice('index.php?action=invoice-search')?>
         <div class="table-wrapper">
             <table class="fl-table">
                 <thead>
@@ -31,7 +31,7 @@ class InvoiceView
                 </thead>
                 <tbody>
                 <?php
-                for ($i = 0; $i <$repositoryObject->countInvoices(); $i++) {
+                for ($i = 0; $i < sizeof($invoiceRepository); $i++) {
 
                 ?>
 

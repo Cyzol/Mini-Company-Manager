@@ -153,16 +153,17 @@ class Layout
         return $html;
     }
 
-    public static function searchbarInvoice()
+    public static function searchbarInvoice($action)
     {
+//        $action = 'index.php?action=invoice-search';
         ob_start();
         ?>
                 <div class="searchbar-section">
-                    <form role="search" method="post" class="search-form form" action="">
-                        <input type="search" class="search-field" placeholder="Id" value="" name="s" title="" />
-                        <input type="search" class="search-field" placeholder="Invoice Number" value="" name="s" title="" />
-                        <input type="search" class="search-field" placeholder="Contractor data" value="" name="s" title="" />
-                        <input type="search" class="search-field" placeholder="Vat" value="" name="s" title="" />
+                    <form role="search" method="post" class="search-form form" action =<?php echo $action ?> >
+                        <input type="search" class="search-field" placeholder="Invoice Number" value="" name="searchBarInvoiceNumber" title="" pattern='[/\A-Z0-9]*'/>
+                        <input type="search" class="search-field" placeholder="Contractor data" value="" name="searchBarContractor" title="" pattern="[\s.a-zA-ZąćęłńóśźżĄĘŁŃÓŚŹŻ0-9]+" />
+                        <input type="search" class="search-field" placeholder="Net amount" value="" name="searchBarNetAmount" title="" pattern="[0-9]{1,10}" />
+                        <input type="search" class="search-field" placeholder="Gross amount" value="" name="searchBarGrossAmount" title="" pattern="[0-9]{1,10}" />
                         <div>
                             <label>Date From: </label>
                             <select class="search-field select-width" >
