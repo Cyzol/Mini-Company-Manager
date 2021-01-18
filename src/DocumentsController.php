@@ -23,9 +23,11 @@ class DocumentsController
         $documentNumber = $_POST['searchBarDocumentNumber'];
         $sender = $_POST['searchBarSender'];
         $recipient = $_POST['searchBarRecipient'];
+        $dateFrom = $_POST['dateFrom'];
+        $dateTo = $_POST['dateTo'];
 
         $DocumentsRepository = new DocumentsRepository();
-        $repository = $DocumentsRepository->getInvoices($documentNumber, $sender, $recipient);
+        $repository = $DocumentsRepository->getInvoices($documentNumber, $sender, $recipient, $dateFrom, $dateTo);
         echo DocumentsView::render($DocumentsRepository, $repository);
 
         return;

@@ -8,7 +8,7 @@ class PurchaseInvoiceRepository extends AbstractRepository
 {
     public $purchaseInvoicesList = array();
 
-    public function getPurchaseInvoices($netAmount=null, $invoiceNumber=null, $contractorData=null,$grossAmount=null){
+    public function getPurchaseInvoices($netAmount=null, $invoiceNumber=null, $contractorData=null,$grossAmount=null, $dateFrom = null, $dateTo =null){
 
         $statement = '';
         $where = ' WHERE ';
@@ -45,6 +45,35 @@ class PurchaseInvoiceRepository extends AbstractRepository
             }
             else{
                 $statement = $statement.$and.'KwotaBrutto = '.$grossAmount;
+            }
+        }
+
+        if($dateFrom != null AND $dateTo != null){
+            if($flag == 0){
+                $statement = $where.'DataZakupu BETWEEN '.$apo.$dateFrom.$apo.$and.$apo.$dateTo.$apo;
+                $flag = 1;
+            }
+            else{
+                $statement = $statement.$and.'DataZakupu BETWEEN '.$apo.$dateFrom.$apo.$and.$apo.$dateTo.$apo;
+            }
+        }else{
+            if($dateFrom != null){
+                if($flag == 0){
+                    $statement = $where.'DataZakupu >= '.$apo.$dateFrom.$apo;
+                    $flag = 1;
+                }
+                else{
+                    $statement = $statement.$and.'DataZakupu >= '.$apo.$dateFrom.$apo;
+                }
+            }
+            if($dateTo != null){
+                if($flag == 0){
+                    $statement = $where.'DataZakupu <= '.$apo.$dateTo.$apo;
+                    $flag = 1;
+                }
+                else{
+                    $statement = $statement.$and.'DataZakupu >= '.$apo.$dateTo.$apo;
+                }
             }
         }
 

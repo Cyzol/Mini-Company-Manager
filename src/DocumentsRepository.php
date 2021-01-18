@@ -8,7 +8,7 @@ class DocumentsRepository extends AbstractRepository
 {
     public $documentslist = array();
 
-    public function getInvoices($documentNumber = null, $sender = null, $recipient = null){
+    public function getInvoices($documentNumber = null, $sender = null, $recipient = null, $dateFrom = null, $dateTo =null){
 
         $statement = '';
         $where = ' WHERE ';
@@ -36,6 +36,37 @@ class DocumentsRepository extends AbstractRepository
             }
             else{
                 $statement = $statement.$and.'Adresat = '.$apo.$recipient.$apo;
+            }
+        }
+
+        if($dateFrom != null AND $dateTo != null){
+            if($flag == 0){
+                $statement = $where.'DataDokumentu BETWEEN '.$apo.$dateFrom.$apo.$and.$apo.$dateTo.$apo;
+                $flag = 1;
+            }
+            else{
+                $statement = $statement.$and.'DataDokumentu BETWEEN '.$apo.$dateFrom.$apo.$and.$apo.$dateTo.$apo;
+            }
+        }else{
+
+            if($dateFrom != null){
+                if($flag == 0){
+                    $statement = $where.'DataDokumentu >= '.$apo.$dateFrom.$apo;
+                    $flag = 1;
+                }
+                else{
+                    $statement = $statement.$and.'DataDokumentu >= '.$apo.$dateFrom.$apo;
+                }
+            }
+
+            if($dateTo != null){
+                if($flag == 0){
+                    $statement = $where.'DataDokumentu <= '.$apo.$dateTo.$apo;
+                    $flag = 1;
+                }
+                else{
+                    $statement = $statement.$and.'DataDokumentu >= '.$apo.$dateTo.$apo;
+                }
             }
         }
 

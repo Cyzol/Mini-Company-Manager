@@ -25,9 +25,11 @@ class PurchaseInvoiceController
         $invoiceNumber = $_POST['searchBarInvoiceNumber'];
         $contractor = $_POST['searchBarContractor'];
         $grossAmount = $_POST['searchBarGrossAmount'];
+        $dateFrom = $_POST['dateFrom'];
+        $dateTo = $_POST['dateTo'];
 
         $PurchaseInvoiceRepository = new PurchaseInvoiceRepository();
-        $repository = $PurchaseInvoiceRepository->getPurchaseInvoices($netAmount, $invoiceNumber, $contractor, $grossAmount);
+        $repository = $PurchaseInvoiceRepository->getPurchaseInvoices($netAmount, $invoiceNumber, $contractor, $grossAmount, $dateFrom, $dateTo);
         echo PurchaseInvoiceView::render($PurchaseInvoiceRepository, $repository);
 
         return;

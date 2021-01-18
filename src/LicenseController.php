@@ -18,4 +18,16 @@ class LicenseController
         echo LicenseView::render($licensesRepository,$repository);
         return;
     }
+
+    public static function search(){
+        $serialNumber = $_POST['serialNumber'];
+        $inventoryNumber = $_POST['inventoryNumber'];
+
+        $licenseRepository = new LicenseRepository();
+        $repository = $licenseRepository->getLicenses($serialNumber, $inventoryNumber);
+        echo LicenseView::render($licenseRepository, $repository);
+
+        return;
+    }
+
 }
