@@ -28,3 +28,5 @@ require_once __DIR__ . '/src/LicenseClass.php';
 require_once __DIR__ . '/src/LicenseRepository.php';
 require_once __DIR__ . '/src/EquipmentClass.php';
 require_once __DIR__ . '/src/EquipmentRepository.php';
+require_once __DIR__ . '/login/currentUser.php';
+require_once __DIR__ . '/login/currentUserObject.php';

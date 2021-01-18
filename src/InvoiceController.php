@@ -10,8 +10,9 @@ class InvoiceController
         die("Tu jest invoice list");
     }
 
-    public static function add()
+    public static function add($currentUser)
     {
+        print_r($currentUser);
         echo InvoiceViewAdd::render();
         return;
     }

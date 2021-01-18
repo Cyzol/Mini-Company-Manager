@@ -1,15 +1,25 @@
 <?php
-require_once '../autoload.php';
+require_once __DIR__ . '/../autoload.php';
 
 class userClass
 {
-    private $id;
-    private $username;
-    private $password;
-    private $role;
+    public $id;
+    public $username;
+    public $password;
+    public $role;
     //0 - admin
     //1 - auditor
-    //2 - amployee
+    //2 - employee
+
+    public function hasRole($role){
+        if ($this->role == $role) {
+            return true;
+        }
+        else{
+            return false;
+        }
+
+    }
 
     /**
      * @return mixed
