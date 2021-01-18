@@ -13,7 +13,7 @@ class LicenseView
         <div class="header-table">
             <h1>License</h1>
         </div>
-
+        <?= Layout::searchbarLicense() ?>
         <div class="table-wrapper">
             <table class="fl-table">
                 <thead>
@@ -32,7 +32,7 @@ class LicenseView
                 </thead>
                 <tbody>
                 <?php
-                for ($i = 0; $i <$repositoryObject->countLicenses(); $i++) {
+                for ($i = 0; $i < sizeof($licensesRepository); $i++) {
 
                     ?>
                     <tr>

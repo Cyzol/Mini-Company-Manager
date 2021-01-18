@@ -53,6 +53,9 @@ switch ($action) {
     case 'license-view':
         LicenseController::view();
         break;
+    case 'license-search':
+        LicenseController::search();
+        break;
     case 'login-set':
         LoginController::set();
         break;

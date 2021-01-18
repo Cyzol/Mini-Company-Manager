@@ -97,8 +97,8 @@ class Layout
         ?>
         <div class="searchbar-section-equipment">
             <form role="search" method="post" class="search-form form" action="index.php?action=equipment-search">
-                <input type="search" class="search-field" placeholder="Serial number" value="" name="serialNumber" title="" />
                 <input type="search" class="search-field" placeholder="Inventory number" value="" name="inventoryNumber" title="" />
+                <input type="search" class="search-field" placeholder="Serial number" value="" name="serialNumber" title="" />
                 <input class="submit-button" type="submit" name="submit" value="Filter">
 
             </form>
@@ -106,6 +106,24 @@ class Layout
         <?php
         $html = ob_get_clean();
         return $html;
+    }
+
+    public static function searchbarLicense(){
+        ob_start();
+        ?>
+        <div class="searchbar-section-license">
+            <form role="search" method="post" class="search-form form" action="index.php?action=license-search">
+                <input type="search" class="search-field" placeholder="Inventory number" value="" name="inventoryNumber" title="" />
+                <input type="search" class="search-field" placeholder="Serial number" value="" name="serialNumber" title="" />
+                <input class="submit-button" type="submit" name="submit" value="Filter">
+
+            </form>
+        </div>
+        <?php
+        $html = ob_get_clean();
+        return $html;
+
+
     }
 
     public static function searchbarDocuments(){
@@ -118,33 +136,11 @@ class Layout
                 <input type="search" class="search-field" placeholder="Recipient" value="" name="searchBarRecipient" title="" />
                 <div>
                     <label>Date From: </label>
-                    <select class="search-field select-width" >
-
-                        <option></option>
-                        <?php
-                        for ($i = 1901; $i <=2021; $i++) {
-
-                            ?>
-                            <option value="<?php print_r($i)?>"> <?php print_r($i)?></option>
-                            <?php
-                        }
-                        ?>
-                    </select>
+                    <input type="date" class="search-field" name="dateFrom"/>
                 </div>
                 <div>
                     <label>Date To: </label>
-                    <select class="search-field select-width" >
-                        <option></option>
-                        <?php
-                        for ($i = 1901; $i <=2021; $i++) {
-
-                            ?>
-                            <option value="<?php print_r($i)?>"> <?php print_r($i)?></option>
-                            <?php
-                        }
-                        ?>
-                    </select>
-
+                    <input type="date" class="search-field" name="dateTo"/>
                 </div>
                 <input class="submit-button" type="submit" name="submit" value="Filter">
 

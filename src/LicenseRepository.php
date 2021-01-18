@@ -8,14 +8,33 @@ class LicenseRepository extends AbstractRepository
 {
     public $licensesList = array();
 
-    public function getLicenses($invoiceNumber=null,$contractorData=null,$amountInCurrency=null){
+    public function getLicenses($serialNumber =null, $inventoryNumber=null){
+
+        $statement = '';
+        $where = ' WHERE ';
+        $and = ' AND ';
+        $flag = 0;
+        $apo = "'";
+
+        if($serialNumber != null){
+            $statement = $where.'KluczSeryjny = '.$apo.$serialNumber.$apo;
+            $flag = 1;
+        }
+        if($inventoryNumber != null){
+            if($flag == 0){
+                $statement = $where.'NumerInwentarzowy = '.$inventoryNumber;
+                $flag = 1;
+            }
+            else{
+                $statement = $statement.$and.'NumerInwentarzowy = '.$inventoryNumber;
+            }
+        }
         try{
             $this->licensesList = array();
-            $statement =  'FROM licencje';
-            $stmt = $this->connection->prepare('SELECT *'.$statement);
+            $stmt = $this->connection->prepare('SELECT * FROM licencje'.$statement);
             $result = $stmt->execute();
             $allLicenses = $stmt->fetchAll();
-            $size = $this->countLicenses();
+            $size = $this->countLicenses($statement);
             for ($i =0;$i<$size;$i++){
                 $singleLicense = new LicenseClass();
                 $singleLicense->setId($allLicenses[$i]["ID"]);
@@ -37,9 +56,8 @@ class LicenseRepository extends AbstractRepository
         }
     }
 
-    public function countLicenses($invoiceNumber=null,$contractorData=null,$amountInCurrency=null){
-        $statement = 'FROM licencje';
-        $stmt = $this->connection->prepare('SELECT COUNT(*)'.$statement);
+    public function countLicenses($statement){
+        $stmt = $this->connection->prepare('SELECT COUNT(*) FROM licencje'.$statement);
         $result = $stmt->execute();
         $count = $stmt->fetchAll();
         return $count[0]['COUNT(*)'];
