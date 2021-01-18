@@ -9,7 +9,7 @@ class LoginController
         return;
     }
 
-    public static function set($currentUser)
+    public static function set(&$currentUser)
     {
         $username = $_POST["username"];
         $password = $_POST["password"];
@@ -21,7 +21,7 @@ class LoginController
             $_SESSION["Role"] = $currentUser->getUser()->getRole();
         }
         print_r($currentUser);
-//        header('Location: index.php?action=home-page');
+        header('Location: index.php?action=home-page');
     }
 
     public static function logout()

@@ -58,4 +58,14 @@ class currentUser
             return False;
         }
     }
+
+    public function canViewInvoice()
+    {
+        if ($this->getUser()->hasRole(0) OR $this->getUser()->hasRole(1) OR $this->getUser()->hasRole(2)){
+            return True;
+        }
+        else{
+            return False;
+        }
+    }
 }

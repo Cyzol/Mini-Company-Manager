@@ -12,10 +12,16 @@ switch ($action) {
         InvoiceController::index();
         break;
     case 'invoice-add':
-        InvoiceController::add($currentUser);
+        if ($currentUser->canUploadInvoice())
+            InvoiceController::add();
+        else
+            HomePageController::index();
         break;
     case 'invoice-view':
-        InvoiceController::view();
+        if ($currentUser->canViewInvoice())
+            InvoiceController::view();
+        else
+            HomePageController::index();
         break;
     case 'purchase-invoice-add':
         PurchaseInvoiceController::add();

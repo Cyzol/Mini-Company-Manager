@@ -12,13 +12,18 @@ class userClass
     //2 - employee
 
     public function hasRole($role){
-        if ($this->role == $role) {
-            return true;
+        if(isset($_SESSION['LoggedIn']) AND isset($_SESSION['Username']) AND isset($_SESSION['Role'])) {
+            if ($_SESSION["Role"] == $role) {
+                return True;
+            }
         }
-        else{
-            return false;
-        }
-
+        return False;
+//        if ($this->role == $role) {
+//            return true;
+//        }
+//        else{
+//            return false;
+//        }
     }
 
     /**
