@@ -32,7 +32,7 @@ class EquipmentView
                 </thead>
                 <tbody>
                 <?php
-                for ($i = 0; $i < $repositoryObject->countEquipments() ; $i++) {
+                for ($i = 0; $i < sizeof($equipmentRepository) ; $i++) {
 
                 ?>
                     <tr>

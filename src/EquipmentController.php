@@ -18,5 +18,16 @@ class EquipmentController
         return;
     }
 
+    public static function search(){
+        $serialNumber = $_POST['serialNumber'];
+        $inventoryNumber = $_POST['inventoryNumber'];
+
+        $equipmentRepository = new EquipmentRepository();
+        $repository = $equipmentRepository->getEquipments($serialNumber, $inventoryNumber);
+        echo EquipmentView::render($equipmentRepository, $repository);
+
+        return;
+    }
+
 
 }

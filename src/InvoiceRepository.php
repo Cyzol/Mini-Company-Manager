@@ -8,7 +8,7 @@ class InvoiceRepository extends AbstractRepository
 {
     public $invoicesList = array();
 
-    public function getInvoices($netAmount=null, $invoiceNumber=null, $contractorData=null,$grossAmount=null){
+    public function getInvoices($netAmount=null, $invoiceNumber=null, $contractorData=null,$grossAmount=null, $dateFrom = null, $dateTo =null){
 
         $statement = '';
         $where = ' WHERE ';
@@ -20,6 +20,7 @@ class InvoiceRepository extends AbstractRepository
             $statement = $where.'KwotaNetto = '.$netAmount;
             $flag = 1;
         }
+
         if($invoiceNumber != null){
             if($flag == 0){
                 $statement = $where.'NumerFaktury = '.$invoiceNumber;
@@ -29,6 +30,7 @@ class InvoiceRepository extends AbstractRepository
                 $statement = $statement.$and.'NumerFaktury = '.$invoiceNumber;
             }
         }
+
         if($contractorData != null){
             if($flag == 0){
                 $statement = $where.'DaneKontrahenta = '.$apo.$contractorData.$apo;
@@ -38,6 +40,7 @@ class InvoiceRepository extends AbstractRepository
                 $statement = $statement.$and.'DaneKontrahenta = '.$apo.$contractorData.$apo;
             }
         }
+
         if($grossAmount != null){
             if($flag == 0){
                 $statement = $where.'KwotaBrutto = '.$grossAmount;
@@ -47,6 +50,40 @@ class InvoiceRepository extends AbstractRepository
                 $statement = $statement.$and.'KwotaBrutto = '.$grossAmount;
             }
         }
+
+        if($dateFrom != null AND $dateTo != null){
+            if($flag == 0){
+                $statement = $where.'DataSprzedazy BETWEEN '.$apo.$dateFrom.$apo.$and.$apo.$dateTo.$apo;
+                $flag = 1;
+            }
+            else{
+                $statement = $statement.$and.'DataSprzedazy BETWEEN '.$apo.$dateFrom.$apo.$and.$apo.$dateTo.$apo;
+            }
+        }else{
+
+            if($dateFrom != null){
+                if($flag == 0){
+                    $statement = $where.'DataSprzedazy >= '.$apo.$dateFrom.$apo;
+                    $flag = 1;
+                }
+                else{
+                    $statement = $statement.$and.'DataSprzedazy >= '.$apo.$dateFrom.$apo;
+                }
+            }
+
+            if($dateTo != null){
+                if($flag == 0){
+                    $statement = $where.'DataSprzedazy <= '.$apo.$dateTo.$apo;
+                    $flag = 1;
+                }
+                else{
+                    $statement = $statement.$and.'DataSprzedazy >= '.$apo.$dateTo.$apo;
+                }
+            }
+        }
+
+
+
 
 
         try{
