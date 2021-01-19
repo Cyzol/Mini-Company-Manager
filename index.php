@@ -27,37 +27,61 @@ switch ($action) {
         InvoiceController::search();
         break;
     case 'purchase-invoice-add':
-        PurchaseInvoiceController::add();
+        if ($currentUser->canUploadInvoice())
+            PurchaseInvoiceController::add();
+        else
+            HomePageController::index();
         break;
     case 'purchase-invoice-view':
-        PurchaseInvoiceController::view();
+        if ($currentUser->canViewInvoice())
+            PurchaseInvoiceController::view();
+        else
+            HomePageController::index();
         break;
     case 'purchase-invoice-search':
         PurchaseInvoiceController::search();
         break;
     case 'documents-add':
-        DocumentsController::add();
+        if ($currentUser->canUploadInvoice())
+            DocumentsController::add();
+        else
+            HomePageController::index();
         break;
     case 'documents-view':
-        DocumentsController::view();
+        if ($currentUser->canViewInvoice())
+            DocumentsController::view();
+        else
+            HomePageController::index();
         break;
     case 'documents-search':
         DocumentsController::search();
         break;
     case 'equipment-add':
-        EquipmentController::add();
+        if ($currentUser->canUploadInvoice())
+            EquipmentController::add();
+        else
+            HomePageController::index();
         break;
     case 'equipment-view':
-        EquipmentController::view();
+        if ($currentUser->canViewInvoice())
+            EquipmentController::view();
+        else
+            HomePageController::index();
         break;
     case 'equipment-search':
         EquipmentController::search();
         break;
     case 'license-add':
-        LicenseController::add();
+        if ($currentUser->canUploadInvoice())
+            LicenseController::add();
+        else
+            HomePageController::index();
         break;
     case 'license-view':
-        LicenseController::view();
+        if ($currentUser->canViewInvoice())
+            LicenseController::view();
+        else
+            HomePageController::index();
         break;
     case 'license-search':
         LicenseController::search();
