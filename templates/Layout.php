@@ -100,7 +100,6 @@ class Layout
                 <input type="search" class="search-field" placeholder="Inventory number" value="" name="inventoryNumber" title="" />
                 <input type="search" class="search-field" placeholder="Serial number" value="" name="serialNumber" title="" />
                 <input class="submit-button" type="submit" name="submit" value="Filter">
-
             </form>
         </div>
         <?php
@@ -134,11 +133,11 @@ class Layout
                 <input type="search" class="search-field" placeholder="Document Number" value="" name="searchBarDocumentNumber" title="" />
                 <input type="search" class="search-field" placeholder="Sender" value="" name="searchBarSender" title="" />
                 <input type="search" class="search-field" placeholder="Recipient" value="" name="searchBarRecipient" title="" />
-                <div>
+                <div class="dates-filters">
                     <label>Date From: </label>
                     <input type="date" class="search-field" name="dateFrom"/>
                 </div>
-                <div>
+                <div class="dates-filters">
                     <label>Date To: </label>
                     <input type="date" class="search-field" name="dateTo"/>
                 </div>
@@ -162,11 +161,11 @@ class Layout
                         <input type="search" class="search-field" placeholder="Contractor data" value="" name="searchBarContractor" title="" pattern="[\s.a-zA-ZąćęłńóśźżĄĘŁŃÓŚŹŻ0-9]+" />
                         <input type="search" class="search-field" placeholder="Net amount" value="" name="searchBarNetAmount" title="" pattern="[0-9]{1,10}" />
                         <input type="search" class="search-field" placeholder="Gross amount" value="" name="searchBarGrossAmount" title="" pattern="[0-9]{1,10}" />
-                        <div>
+                        <div class="dates-filters">
                             <label>Date From: </label>
                             <input type="date" class="search-field" name="dateFrom"/>
                         </div>
-                        <div>
+                        <div class="dates-filters">
                             <label>Date To: </label>
                             <input type="date" class="search-field" name="dateTo"/>
                         </div>

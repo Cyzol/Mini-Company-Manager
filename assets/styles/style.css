@@ -55,7 +55,7 @@ input{
     margin-top: 30px;
 }
 
-input[type=text], input[type=password],input[type=number],input[type=date]{
+.box-form input[type=text], input[type=password],input[type=number],.box-form input[type=date]{
     padding: 10px;
     width: 400px;
 }
@@ -389,7 +389,6 @@ input:focus {
     font-size: 16px;
     background-color: white;
     background-image:url('https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/search-24.png');
-
     background-position: 10px 7px;
     background-repeat: no-repeat;
     padding: 8px 20px 8px 40px;
@@ -414,7 +413,7 @@ input:focus {
 }
 
 .searchbar-section-documents{
-    width: 40vw;
+    width: 70vw;
     margin: auto;
 }
 
@@ -424,7 +423,8 @@ input:focus {
 }
 
 input[type="search"],
-select{
+select,
+input[type="date"]{
     background-color: white;
     border-radius: 0.25rem;
     border: 1px solid #e0e0e5;
@@ -435,6 +435,14 @@ select{
     -moz-transition: border-color 0.2s;
     transition: border-color 0.2s;
 }
+.dates-filters{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
 
 input[type="search"]:focus,
 select:focus{
