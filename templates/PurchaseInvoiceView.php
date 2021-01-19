@@ -12,7 +12,7 @@ class PurchaseInvoiceView
         <div class="header-table">
             <h1>Purchase Invoice</h1>
         </div>
-        <?= Layout::searchbarInvoice('index.php?action=purchase-invoice-search')?>
+        <?= Layout::searchbarPurchaseInvoice('index.php?action=purchase-invoice-search')?>
         <div class="table-wrapper">
             <table class="fl-table">
                 <thead>
