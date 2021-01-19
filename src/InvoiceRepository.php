@@ -93,7 +93,6 @@ class InvoiceRepository extends AbstractRepository
             $summed = $stmt2->fetchAll();
             $sum = new InvoiceClass();
 
-            print_r($summed);
 
             $sum->setNetAmount($summed[0]["KwotaNettoSum"]);
             $sum->setVatTax($summed[0]["KwotaPodatkuVATSum"]);
