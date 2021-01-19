@@ -442,7 +442,9 @@ input[type="date"]{
 }
 
 
-
+.see-all{
+    font-size: 1.15rem;
+}
 
 input[type="search"]:focus,
 select:focus{

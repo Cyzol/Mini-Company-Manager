@@ -100,6 +100,7 @@ class Layout
                 <input type="search" class="search-field" placeholder="Inventory number" value="" name="inventoryNumber" title="" />
                 <input type="search" class="search-field" placeholder="Serial number" value="" name="serialNumber" title="" />
                 <input class="submit-button" type="submit" name="submit" value="Filter">
+                <a class="see-all" href="index.php?action=equipment-view">See All</a>
             </form>
         </div>
         <?php
@@ -115,7 +116,7 @@ class Layout
                 <input type="search" class="search-field" placeholder="Inventory number" value="" name="inventoryNumber" title="" />
                 <input type="search" class="search-field" placeholder="Serial number" value="" name="serialNumber" title="" />
                 <input class="submit-button" type="submit" name="submit" value="Filter">
-
+                <a class="see-all" href="index.php?action=license-view">See All</a>
             </form>
         </div>
         <?php
@@ -142,7 +143,7 @@ class Layout
                     <input type="date" class="search-field" name="dateTo"/>
                 </div>
                 <input class="submit-button" type="submit" name="submit" value="Filter">
-
+                <a class="see-all" href="index.php?action=documents-view">See All</a>
             </form>
         </div>
         <?php
@@ -170,9 +171,37 @@ class Layout
                             <input type="date" class="search-field" name="dateTo"/>
                         </div>
                         <input class="submit-button" type="submit" name="submit" value="Filter">
-
+                        <a class="see-all" href="index.php?action=invoice-view">See All</a>
                     </form>
                 </div>
+        <?php
+        $html = ob_get_clean();
+        return $html;
+    }
+
+    public static function searchbarPurchaseInvoice($action)
+    {
+//        $action = 'index.php?action=invoice-search';
+        ob_start();
+        ?>
+        <div class="searchbar-section">
+            <form role="search" method="post" class="search-form form" action =<?php echo $action ?> >
+                <input type="search" class="search-field" placeholder="Invoice Number" value="" name="searchBarInvoiceNumber" title="" pattern='[/\A-Z0-9]*'/>
+                <input type="search" class="search-field" placeholder="Contractor data" value="" name="searchBarContractor" title="" pattern="[\s.a-zA-ZąćęłńóśźżĄĘŁŃÓŚŹŻ0-9]+" />
+                <input type="search" class="search-field" placeholder="Net amount" value="" name="searchBarNetAmount" title="" pattern="[0-9]{1,10}" />
+                <input type="search" class="search-field" placeholder="Gross amount" value="" name="searchBarGrossAmount" title="" pattern="[0-9]{1,10}" />
+                <div class="dates-filters">
+                    <label>Date From: </label>
+                    <input type="date" class="search-field" name="dateFrom"/>
+                </div>
+                <div class="dates-filters">
+                    <label>Date To: </label>
+                    <input type="date" class="search-field" name="dateTo"/>
+                </div>
+                <input class="submit-button" type="submit" name="submit" value="Filter">
+                <a class="see-all" href="index.php?action=purchase-invoice-view">See All</a>
+            </form>
+        </div>
         <?php
         $html = ob_get_clean();
         return $html;
