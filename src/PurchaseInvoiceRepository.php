@@ -81,8 +81,19 @@ class PurchaseInvoiceRepository extends AbstractRepository
             $this->purchaseInvoicesList = array();
             $stmt = $this->connection->prepare('SELECT * FROM fakturyzakupu'.$statement);
             $result = $stmt->execute();
+            $stmt2 = $this->connection->prepare('SELECT SUM(KwotaNetto) as KwotaNettoSum,SUM(KwotaPodatkuVAT) as KwotaPodatkuVATSum ,SUM(KwotaBrutto) as KwotaBruttoSum FROM fakturyzakupu'.$statement);
+            $result2 = $stmt2->execute();
             $allPurchaseInvoices = $stmt->fetchAll();
+            $summed = $stmt2->fetchAll();
+            $sum = new PurchaseInvoiceClass();
+
+            $sum->setNetAmount($summed[0]["KwotaNettoSum"]);
+            $sum->setVatTax($summed[0]["KwotaPodatkuVATSum"]);
+            $sum->setGrossAmount($summed[0]["KwotaBruttoSum"]);
+
             $size = $this->countPurchaseInvoices($statement);
+            $this->purchaseInvoicesList[]=$sum;
+
             for ($i =0;$i<$size;$i++){
                 $singleInvoice = new PurchaseInvoiceClass();
                 $singleInvoice->setId($allPurchaseInvoices[$i]["ID"]);
