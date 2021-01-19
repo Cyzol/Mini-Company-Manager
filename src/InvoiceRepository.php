@@ -82,16 +82,25 @@ class InvoiceRepository extends AbstractRepository
             }
         }
 
-
-
-
-
         try{
             $this->invoicesList = array();
             $stmt = $this->connection->prepare('SELECT * FROM fakturysprzedazy'.$statement);
             $result = $stmt->execute();
-            $allInvoices = $stmt->fetchAll();
+            $stmt2 = $this->connection->prepare('SELECT SUM(KwotaNetto) as KwotaNettoSum,SUM(KwotaPodatkuVAT) as KwotaPodatkuVATSum ,SUM(KwotaBrutto) as KwotaBruttoSum FROM fakturysprzedazy'.$statement);
+            $result2 = $stmt2->execute();
             $size = $this->countInvoices($statement);
+            $allInvoices = $stmt->fetchAll();
+            $summed = $stmt2->fetchAll();
+            $sum = new InvoiceClass();
+
+            print_r($summed);
+
+            $sum->setNetAmount($summed[0]["KwotaNettoSum"]);
+            $sum->setVatTax($summed[0]["KwotaPodatkuVATSum"]);
+            $sum->setGrossAmount($summed[0]["KwotaBruttoSum"]);
+
+            $this->invoicesList[]=$sum;
+
             for ($i =0;$i<$size;$i++){
                 $singleInvoice = new InvoiceClass();
                 $singleInvoice->setId($allInvoices[$i]["ID"]);

@@ -24,6 +24,7 @@ class InvoiceController
         return;
     }
 
+
     public static function search(){
         $netAmount = $_POST['searchBarNetAmount'];
         $invoiceNumber = $_POST['searchBarInvoiceNumber'];

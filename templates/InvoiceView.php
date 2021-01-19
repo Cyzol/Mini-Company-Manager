@@ -30,8 +30,21 @@ class InvoiceView
                 </tr>
                 </thead>
                 <tbody>
+                <tr>
+                    <th scope="row"></th>
+                    <th>Summary</th>
+                    <th></th>
+                    <th><?php print_r($invoiceRepository[0]->getNetAmount())?></th>
+                    <th><?php print_r($invoiceRepository[0]->getVatTax())?></th>
+                    <th><?php print_r($invoiceRepository[0]->getGrossAmount())?></th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
                 <?php
-                for ($i = 0; $i < sizeof($invoiceRepository); $i++) {
+                for ($i = 1; $i < sizeof($invoiceRepository); $i++) {
 
                 ?>
 

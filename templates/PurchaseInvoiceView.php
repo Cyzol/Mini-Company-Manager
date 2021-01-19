@@ -31,8 +31,21 @@ class PurchaseInvoiceView
                 </tr>
                 </thead>
                 <tbody>
+                <tr>
+                    <th scope="row"></th>
+                    <th>Summary</th>
+                    <td></td>
+                    <td></td>
+                    <th><?php print_r($purchaseInvoiceRepository[0]->getNetAmount())?></th>
+                    <th><?php print_r($purchaseInvoiceRepository[0]->getGrossAmount())?></th>
+                    <th><?php print_r($purchaseInvoiceRepository[0]->getVatTax())?></th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
                 <?php
-                for ($i = 0; $i < sizeof($purchaseInvoiceRepository); $i++) {
+                for ($i = 1; $i < sizeof($purchaseInvoiceRepository); $i++) {
 
                 ?>
                 <tr>
