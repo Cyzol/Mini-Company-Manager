@@ -102,6 +102,6 @@ switch ($action) {
         LoginController::logout();
         break;
     default:
-        header('Location: index.php?action=home-page');
+        header('Location: index.php?action=login');
         break;
 }

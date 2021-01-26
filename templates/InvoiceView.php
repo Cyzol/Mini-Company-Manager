@@ -58,7 +58,7 @@ class InvoiceView
                     <td><?php print_r($invoiceRepository[$i]->getSaleDate())?></td>
                     <td><?php print_r($invoiceRepository[$i]->getAmountInCurrency())?></td>
                     <td><?php print_r($invoiceRepository[$i]->getCurrency())?></td>
-                    <td><?php print_r($invoiceRepository[$i]->getUrl())?></td>
+                    <td><a href="Mini-Company-Manager/<?php print_r($invoiceRepository[$i]->getUrl())?>"><i class="far fa-file-pdf"></i></a></td>
                 </tr>
                     <?php
                         }

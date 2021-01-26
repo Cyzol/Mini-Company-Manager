@@ -38,7 +38,7 @@ class DocumentsView
                             <td><?php print_r($documentsRepository[$i]->getSender())?></td>
                             <td><?php print_r($documentsRepository[$i]->getRecipient())?></td>
                             <td><?php print_r($documentsRepository[$i]->getNotes())?></td>
-                            <td><?php print_r($documentsRepository[$i]->getUrl())?></td>
+                            <td><a href="Mini-Company-Manager/<?php print_r($documentsRepository[$i]->getUrl())?>"><i class="far fa-file-pdf"></i></a></td>
                         </tr>
                     <?php
                         }
