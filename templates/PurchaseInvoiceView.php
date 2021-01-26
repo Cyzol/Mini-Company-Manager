@@ -59,7 +59,7 @@ class PurchaseInvoiceView
                     <td><?php print_r($purchaseInvoiceRepository[$i]->getDateInvoice())?></td>
                     <td><?php print_r($purchaseInvoiceRepository[$i]->getAmountInCurrency())?></td>
                     <td><?php print_r($purchaseInvoiceRepository[$i]->getCurrency())?></td>
-                    <td><?php print_r($purchaseInvoiceRepository[$i]->getFileToUpload())?></td>
+                    <td><a href="Mini-Company-Manager/<?php print_r($purchaseInvoiceRepository[$i]->getFileToUpload())?>"><i class="far fa-file-pdf"></i></a></td>
                 </tr>
                 <?php
                     }
